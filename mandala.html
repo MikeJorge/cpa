@@ -1,0 +1,1563 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Highcharts Example</title>
+
+		<style type="text/css">
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 320px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+.highcharts-description {
+    margin: 0.3rem 10px;
+}
+
+		</style>
+	</head>
+	<body>
+<script src="../../code/highcharts.js"></script>
+<script src="../../code/modules/sunburst.js"></script>
+<script src="../../code/modules/exporting.js"></script>
+<script src="../../code/modules/export-data.js"></script>
+<script src="../../code/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        Sunburst charts are used to visualize hierarchical data in a
+        circular shape. The inner elements are parent nodes, with
+        child nodes distributed on the outer rings. Click on a parent
+        node to drill down and inspect the tree in more detail.
+    </p>
+</figure>
+
+
+
+		<script type="text/javascript">
+const createChart = data => Highcharts.chart('container', {
+
+    chart: {
+        height: '100%'
+    },
+
+    // Let the center circle be white transparent
+    colors: ['#ffffff01'].concat(Highcharts.getOptions().colors),
+
+    title: {
+        text: 'Titulo da Mandala Aqui Teste'
+    },
+
+    subtitle: {
+        text: 'Source <a href="https://en.wikipedia.org/wiki/List_of_countries_by_population_(United_Nations)">Wikipedia</a>'
+    },
+
+    series: [{
+        type: 'sunburst',
+        data: data,
+        name: 'Root',
+        allowTraversingTree: true,
+        borderRadius: 3,
+        cursor: 'pointer',
+        dataLabels: {
+            format: '{point.name}',
+            filter: {
+                property: 'innerArcLength',
+                operator: '>',
+                value: 1 // 16
+            }
+        },
+        levels: [{
+            level: 1,
+            levelIsConstant: false,
+            dataLabels: {
+                filter: {
+                    property: 'outerArcLength',
+                    operator: '>',
+                    value: 1 // 64
+                }
+            }
+        }, {
+            level: 2,
+            colorByPoint: true
+        },
+        {
+            level: 3,
+            colorVariation: {
+                key: 'brightness',
+                to: -0.5
+            }
+        }, {
+            level: 4,
+            colorVariation: {
+                key: 'brightness',
+                to: 0.5
+            }
+        }]
+
+    }],
+
+    tooltip: {
+        headerFormat: '',
+        // pointFormat: 'The population of <b>{point.name}</b> is <b>' +
+        //    '{point.value}</b>'
+    }
+});
+
+// Define the data
+const data = [{
+    id: '0.0',
+    parent: '',
+    name: 'Centro da Mandala'
+}, {
+    id: '1.3',
+    parent: '0.0',
+    name: 'Flamengo'
+}, {
+    id: '1.1',
+    parent: '0.0',
+    name: 'Vasco'
+}, {
+    id: '1.2',
+    parent: '0.0',
+    name: 'Fluminense'
+}, {
+    id: '1.4',
+    parent: '0.0',
+    name: 'Botafogo'
+}, {
+    id: '1.5',
+    parent: '0.0',
+    name: 'Nova Iguaçu'
+},{
+    id: '1.6',
+    parent: '0.0',
+    name: 'São Paulo'
+},
+
+/* Vasco */
+{
+    id: '2.1',
+    parent: '1.1',
+    name: 'Time'
+},
+
+{
+    id: '3.1',
+    parent: '2.1',
+    name: 'Vegetti',
+    value: 1 //  126527060
+}, {
+    id: '3.2',
+    parent: '2.1',
+    name: 'Coutinho',
+    value: 1 // 67438106
+}, {
+    id: '3.3',
+    parent: '2.1',
+    name: 'Hugo Moura',
+    value: 1 // 55100587
+}, {
+    id: '3.4',
+    parent: '2.1',
+    name: 'Vitor Hugo',
+    value: 1 // 48582334
+}, {
+    id: '3.5',
+    parent: '2.1',
+    name: 'Ryan',
+    value: 1 // 33897354
+}, {
+    id: '3.5',
+    parent: '2.1',
+    name: 'Diniz Técnico',
+    value: 1 // 33897354
+},// {
+//     id: '3.6',
+//     parent: '2.1',
+//     name: 'Madagascar',
+//     value: 1 // 30325732
+// }, {
+//     id: '3.7',
+//     parent: '2.1',
+//     name: 'Malawi',
+//     value: 1 // 20931751
+// }, {
+//     id: '3.8',
+//     parent: '2.1',
+//     name: 'Zambia',
+//     value: 1 // 20569738
+// }, {
+//     id: '3.9',
+//     parent: '2.1',
+//     name: 'Somalia',
+//     value: 1 // 18143379
+// }, {
+//     id: '3.10',
+//     parent: '2.1',
+//     name: 'Zimbabwe',
+//     value: 1 // 16665409
+// }, {
+//     id: '3.11',
+//     parent: '2.1',
+//     name: 'Rwanda',
+//     value: 1 // 14094683
+// }, {
+//     id: '3.12',
+//     parent: '2.1',
+//     name: 'Burundi',
+//     value: 1 // 13238559
+// }, {
+//     id: '3.13',
+//     parent: '2.1',
+//     name: 'South Sudan',
+//     value: 1 // 11088796
+// }, {
+//     id: '3.14',
+//     parent: '2.1',
+//     name: 'Eritrea',
+//     value: 1 // 3748902
+// }, {
+//     id: '3.15',
+//     parent: '2.1',
+//     name: 'Mauritius',
+//     value: 1 // 1300557
+// }, {
+//     id: '3.16',
+//     parent: '2.1',
+//     name: 'Djibouti',
+//     value: 1 // 1136455
+// }, {
+//     id: '3.17',
+//     parent: '2.1',
+//     name: 'Réunion',
+//     value: 1 // 981796
+// }, {
+//     id: '3.18',
+//     parent: '2.1',
+//     name: 'Comoros',
+//     value: 1 // 852075
+// }, {
+//     id: '3.19',
+//     parent: '2.1',
+//     name: 'Mayotte',
+//     value: 1 // 335995
+// }, {
+//     id: '3.20',
+//     parent: '2.1',
+//     name: 'Seychelles',
+//     value: 1 // 107660
+// },
+
+{
+    id: '2.5',
+    parent: '1.1',
+    name: 'Comissão técnica'
+},
+
+{
+    id: '3.42',
+    parent: '2.5',
+    name: 'Nigeria',
+    value: 1 // 223804632
+}, {
+    id: '3.43',
+    parent: '2.5',
+    name: 'Ghana',
+    value: 1 // 34121985
+}, {
+    id: '3.44',
+    parent: '2.5',
+    name: 'Ivory Coast',
+    value: 1 // 28873034
+}, {
+    id: '3.45',
+    parent: '2.5',
+    name: 'Niger',
+    value: 1 // 27202843
+}, {
+    id: '3.46',
+    parent: '2.5',
+    name: 'Mali',
+    value: 1 // 23293699
+}, {
+    id: '3.47',
+    parent: '2.5',
+    name: 'Burkina Faso',
+    value: 1 // 23251485
+}, {
+    id: '3.48',
+    parent: '2.5',
+    name: 'Senegal',
+    value: 1 // 17763163
+}, {
+    id: '3.49',
+    parent: '2.5',
+    name: 'Guinea',
+    value: 1 // 14190612
+}, {
+    id: '3.50',
+    parent: '2.5',
+    name: 'Benin',
+    value: 1 // 13712828
+}, {
+    id: '3.51',
+    parent: '2.5',
+    name: 'Togo',
+    value: 1 // 9053799
+}, {
+    id: '3.52',
+    parent: '2.5',
+    name: 'Sierra Leone',
+    value: 1 // 8791092
+}, {
+    id: '3.53',
+    parent: '2.5',
+    name: 'Liberia',
+    value: 1 // 5418377
+}, {
+    id: '3.54',
+    parent: '2.5',
+    name: 'Mauritania',
+    value: 1 // 4862989
+}, {
+    id: '3.55',
+    parent: '2.5',
+    name: 'Gambia',
+    value: 1 // 2773168
+}, {
+    id: '3.56',
+    parent: '2.5',
+    name: 'Guinea-Bissau',
+    value: 1 // 2150842
+}, {
+    id: '3.57',
+    parent: '2.5',
+    name: 'Cape Verde',
+    value: 1 // 598682
+}, {
+    id: '3.58',
+    parent: '2.5',
+    name: 'Saint Helena',
+    value: 1 // 5314
+},
+
+{
+    id: '2.3',
+    parent: '1.1',
+    name: 'Staff'
+},
+
+{
+    id: '3.30',
+    parent: '2.3',
+    name: 'Egypt',
+    value: 1 // 112716599
+}, {
+    id: '3.31',
+    parent: '2.3',
+    name: 'Sudan',
+    value: 1 // 48109006
+}, {
+    id: '3.32',
+    parent: '2.3',
+    name: 'Algeria',
+    value: 1 // 45606481
+}, {
+    id: '3.33',
+    parent: '2.3',
+    name: 'Morocco',
+    value: 1 // 37840044
+}, {
+    id: '3.34',
+    parent: '2.3',
+    name: 'Tunisia',
+    value: 1 // 12458223
+}, {
+    id: '3.35',
+    parent: '2.3',
+    name: 'Libya',
+    value: 1 // 6888388
+}, {
+    id: '3.36',
+    parent: '2.3',
+    name: 'Western Sahara',
+    value: 1 // 587259
+},
+
+{
+    id: '2.2',
+    parent: '1.1',
+    name: 'Diretoria'
+},
+
+{
+    id: '3.21',
+    parent: '2.2',
+    name: 'DR Congo',
+    value: 1 // 102262809
+}, {
+    id: '3.22',
+    parent: '2.2',
+    name: 'Angola',
+    value: 1 // 36684203
+}, {
+    id: '3.23',
+    parent: '2.2',
+    name: 'Cameroon',
+    value: 1 // 28647293
+}, {
+    id: '3.24',
+    parent: '2.2',
+    name: 'Chad',
+    value: 1 // 18278568
+}, {
+    id: '3.25',
+    parent: '2.2',
+    name: 'Congo',
+    value: 1 // 6106869
+}, {
+    id: '3.26',
+    parent: '2.2',
+    name: 'Central African Republic',
+    value: 1 // 5742316
+}, {
+    id: '3.27',
+    parent: '2.2',
+    name: 'Gabon',
+    value: 1 // 2436567
+}, {
+    id: '3.28',
+    parent: '2.2',
+    name: 'Equatorial Guinea',
+    value: 1 // 1714672
+}, {
+    id: '3.29',
+    parent: '2.2',
+    name: 'São Tomé and Príncipe',
+    value: 1 // 231856
+},
+
+{
+    id: '2.4',
+    parent: '1.1',
+    name: 'Massagearia'
+},
+
+{
+    id: '3.37',
+    parent: '2.4',
+    name: 'South Africa',
+    value: 1 // 60414495
+}, {
+    id: '3.38',
+    parent: '2.4',
+    name: 'Botswana',
+    value: 1 // 2675353
+}, {
+    id: '3.39',
+    parent: '2.4',
+    name: 'Namibia',
+    value: 1 // 2604172
+}, {
+    id: '3.40',
+    parent: '2.4',
+    name: 'Lesotho',
+    value: 1 // 2330318
+}, {
+    id: '3.41',
+    parent: '2.4',
+    name: 'Eswatini',
+    value: 1 // 1210822
+},
+
+/** *********/
+
+/* America */
+{
+    id: '2.9',
+    parent: '1.2',
+    name: 'South America'
+},
+
+{
+    id: '3.100',
+    parent: '2.9',
+    name: 'Brazil',
+    value: 1 // 216422446
+}, {
+    id: '3.101',
+    parent: '2.9',
+    name: 'Colombia',
+    value: 1 // 52085168
+}, {
+    id: '3.102',
+    parent: '2.9',
+    name: 'Argentina',
+    value: 1 // 45773884
+}, {
+    id: '3.103',
+    parent: '2.9',
+    name: 'Peru',
+    value: 1 // 34352719
+}, {
+    id: '3.104',
+    parent: '2.9',
+    name: 'Venezuela',
+    value: 1 // 28838499
+}, {
+    id: '3.105',
+    parent: '2.9',
+    name: 'Chile',
+    value: 1 // 19629590
+}, {
+    id: '3.106',
+    parent: '2.9',
+    name: 'Ecuador',
+    value: 1 // 18190484
+}, {
+    id: '3.107',
+    parent: '2.9',
+    name: 'Bolivia',
+    value: 1 // 12388571
+}, {
+    id: '3.108',
+    parent: '2.9',
+    name: 'Paraguay',
+    value: 1 // 6861524
+}, {
+    id: '3.109',
+    parent: '2.9',
+    name: 'Uruguay',
+    value: 1 // 3423109
+}, {
+    id: '3.110',
+    parent: '2.9',
+    name: 'Guyana',
+    value: 1 // 813834
+}, {
+    id: '3.111',
+    parent: '2.9',
+    name: 'Suriname',
+    value: 1 // 623237
+}, {
+    id: '3.112',
+    parent: '2.9',
+    name: 'French Guiana',
+    value: 1 // 312155
+}, {
+    id: '3.113',
+    parent: '2.9',
+    name: 'Falkland Islands',
+    value: 1 // 3791
+},
+
+{
+    id: '2.8',
+    parent: '1.2',
+    name: 'Northern America'
+},
+
+{
+    id: '3.95',
+    parent: '2.8',
+    name: 'United States',
+    value: 1 // 339996564
+}, {
+    id: '3.96',
+    parent: '2.8',
+    name: 'Canada',
+    value: 1 // 38781292
+}, {
+    id: '3.97',
+    parent: '2.8',
+    name: 'Bermuda',
+    value: 1 // 64069
+}, {
+    id: '3.98',
+    parent: '2.8',
+    name: 'Greenland',
+    value: 1 // 56643
+}, {
+    id: '3.99',
+    parent: '2.8',
+    name: 'Saint Pierre and Miquelon',
+    value: 1 // 5840
+},
+
+{
+    id: '2.7',
+    parent: '1.2',
+    name: 'Central America'
+},
+
+{
+    id: '3.87',
+    parent: '2.7',
+    name: 'Mexico',
+    value: 1 // 128455567
+}, {
+    id: '3.88',
+    parent: '2.7',
+    name: 'Guatemala',
+    value: 1 // 18092026
+}, {
+    id: '3.89',
+    parent: '2.7',
+    name: 'Honduras',
+    value: 1 // 10593798
+}, {
+    id: '3.90',
+    parent: '2.7',
+    name: 'Nicaragua',
+    value: 1 // 7046311
+}, {
+    id: '3.91',
+    parent: '2.7',
+    name: 'El Salvador',
+    value: 1 // 6364943
+}, {
+    id: '3.92',
+    parent: '2.7',
+    name: 'Costa Rica',
+    value: 1 // 5212173
+}, {
+    id: '3.93',
+    parent: '2.7',
+    name: 'Panama',
+    value: 1 // 4468087
+}, {
+    id: '3.94',
+    parent: '2.7',
+    name: 'Belize',
+    value: 1 // 410825
+},
+
+{
+    id: '2.6',
+    parent: '1.2',
+    name: 'Caribbean'
+},
+
+{
+    id: '3.59',
+    parent: '2.6',
+    name: 'Haiti',
+    value: 1 // 11724764
+}, {
+    id: '3.60',
+    parent: '2.6',
+    name: 'Dominican Republic',
+    value: 1 // 11332973
+}, {
+    id: '3.61',
+    parent: '2.6',
+    name: 'Cuba',
+    value: 1 // 11194449
+}, {
+    id: '3.62',
+    parent: '2.6',
+    name: 'Puerto Rico',
+    value: 1 // 3260314
+}, {
+    id: '3.63',
+    parent: '2.6',
+    name: 'Jamaica',
+    value: 1 // 2825544
+}, {
+    id: '3.64',
+    parent: '2.6',
+    name: 'Trinidad and Tobago',
+    value: 1 // 1534937
+}, {
+    id: '3.65',
+    parent: '2.6',
+    name: 'Bahamas',
+    value: 1 // 412624
+}, {
+    id: '3.66',
+    parent: '2.6',
+    name: 'Guadeloupe',
+    value: 1 // 395839
+}, {
+    id: '3.67',
+    parent: '2.6',
+    name: 'Martinique',
+    value: 1 // 366981
+}, {
+    id: '3.68',
+    parent: '2.6',
+    name: 'Barbados',
+    value: 1 // 281996
+}, {
+    id: '3.69',
+    parent: '2.6',
+    name: 'Curaçao ',
+    value: 1 // 192077
+}, {
+    id: '3.70',
+    parent: '2.6',
+    name: 'Saint Lucia',
+    value: 1 // 180251
+}, {
+    id: '3.71',
+    parent: '2.6',
+    name: 'Grenada',
+    value: 1 // 126184
+}, {
+    id: '3.72',
+    parent: '2.6',
+    name: 'Aruba',
+    value: 1 // 106277
+}, {
+    id: '3.73',
+    parent: '2.6',
+    name: 'Saint Vincent and the Grenadines',
+    value: 1 // 103699
+}, {
+    id: '3.74',
+    parent: '2.6',
+    name: 'U.S. Virgin Islands',
+    value: 1 // 98750
+}, {
+    id: '3.75',
+    parent: '2.6',
+    name: 'Antigua and Barbuda',
+    value: 1 // 94298
+}, {
+    id: '3.76',
+    parent: '2.6',
+    name: 'Dominica',
+    value: 1 // 73040
+}, {
+    id: '3.77',
+    parent: '2.6',
+    name: 'Cayman Islands ',
+    value: 1 // 69310
+}, {
+    id: '3.78',
+    parent: '2.6',
+    name: 'Saint Kitts and Nevis',
+    value: 1 // 47755
+}, {
+    id: '3.79',
+    parent: '2.6',
+    name: 'Turks and Caicos Islands',
+    value: 1 // 46062
+}, {
+    id: '3.80',
+    parent: '2.6',
+    name: 'Sint Maarten',
+    value: 1 // 44222
+}, {
+    id: '3.81',
+    parent: '2.6',
+    name: 'Saint Martin',
+    value: 1 // 32077
+}, {
+    id: '3.82',
+    parent: '2.6',
+    name: 'British Virgin Islands',
+    value: 1 // 31538
+}, {
+    id: '3.83',
+    parent: '2.6',
+    name: 'Caribbean Netherlands',
+    value: 1 // 27148
+}, {
+    id: '3.84',
+    parent: '2.6',
+    name: 'Anguilla',
+    value: 1 // 15900
+}, {
+    id: '3.85',
+    parent: '2.6',
+    name: 'Saint Barthélemy',
+    value: 1 // 10994
+}, {
+    id: '3.86',
+    parent: '2.6',
+    name: 'Montserrat',
+    value: 1 // 4387
+},
+/** *********/
+
+/* Asia */
+{
+    id: '2.13',
+    parent: '1.3',
+    name: 'Southern Asia'
+},
+
+{
+    id: '3.138',
+    parent: '2.13',
+    name: 'India',
+    value: 1 // 1428627663
+}, {
+    id: '3.139',
+    parent: '2.13',
+    name: 'Pakistan',
+    value: 1 // 240485658
+}, {
+    id: '3.140',
+    parent: '2.13',
+    name: 'Bangladesh',
+    value: 1 // 172954319
+}, {
+    id: '3.141',
+    parent: '2.13',
+    name: 'Iran',
+    value: 1 // 89172767
+}, {
+    id: '3.142',
+    parent: '2.13',
+    name: 'Afghanistan',
+    value: 1 // 42239854
+}, {
+    id: '3.143',
+    parent: '2.13',
+    name: 'Nepal',
+    value: 1 // 30896590
+}, {
+    id: '3.144',
+    parent: '2.13',
+    name: 'Sri Lanka',
+    value: 1 // 21893579
+}, {
+    id: '3.145',
+    parent: '2.13',
+    name: 'Bhutan',
+    value: 1 // 787425
+}, {
+    id: '3.146',
+    parent: '2.13',
+    name: 'Maldives',
+    value: 1 // 523787
+},
+
+{
+    id: '2.11',
+    parent: '1.3',
+    name: 'Eastern Asia'
+},
+
+{
+    id: '3.119',
+    parent: '2.11',
+    name: 'China',
+    value: 1 // 1425671352
+}, {
+    id: '3.120',
+    parent: '2.11',
+    name: 'Japan',
+    value: 1 // 123294513
+}, {
+    id: '3.121',
+    parent: '2.11',
+    name: 'South Korea',
+    value: 1 // 51784059
+}, {
+    id: '3.122',
+    parent: '2.11',
+    name: 'North Korea',
+    value: 1 // 26160822
+}, {
+    id: '3.123',
+    parent: '2.11',
+    name: 'Taiwan',
+    value: 1 // 23923277
+}, {
+    id: '3.124',
+    parent: '2.11',
+    name: 'Hong Kong',
+    value: 1 // 7491609
+}, {
+    id: '3.125',
+    parent: '2.11',
+    name: 'Mongolia',
+    value: 1 // 3447157
+}, {
+    id: '3.126',
+    parent: '2.11',
+    name: 'Macao',
+    value: 1 // 704150
+},
+
+{
+    id: '2.12',
+    parent: '1.3',
+    name: 'South-Eastern Asia'
+},
+
+{
+    id: '3.127',
+    parent: '2.12',
+    name: 'Indonesia',
+    value: 1 // 277534123
+}, {
+    id: '3.128',
+    parent: '2.12',
+    name: 'Philippines',
+    value: 1 // 117337368
+}, {
+    id: '3.129',
+    parent: '2.12',
+    name: 'Vietnam',
+    value: 1 // 98858950
+}, {
+    id: '3.130',
+    parent: '2.12',
+    name: 'Thailand',
+    value: 1 // 71801279
+}, {
+    id: '3.131',
+    parent: '2.12',
+    name: 'Myanmar',
+    value: 1 // 54577997
+}, {
+    id: '3.132',
+    parent: '2.12',
+    name: 'Malaysia',
+    value: 1 // 34308525
+}, {
+    id: '3.133',
+    parent: '2.12',
+    name: 'Cambodia',
+    value: 1 // 16944826
+}, {
+    id: '3.134',
+    parent: '2.12',
+    name: 'Laos',
+    value: 1 // 7633779
+}, {
+    id: '3.135',
+    parent: '2.12',
+    name: 'Singapore',
+    value: 1 // 6014723
+}, {
+    id: '3.136',
+    parent: '2.12',
+    name: 'East Timor',
+    value: 1 // 1360596
+}, {
+    id: '3.137',
+    parent: '2.12',
+    name: 'Brunei',
+    value: 1 // 452524
+},
+
+{
+    id: '2.14',
+    parent: '1.3',
+    name: 'Western Asia'
+},
+
+{
+    id: '3.147',
+    parent: '2.14',
+    name: 'Iraq',
+    value: 1 // 45504560
+}, {
+    id: '3.148',
+    parent: '2.14',
+    name: 'Turkey',
+    value: 1 // 85816199
+}, {
+    id: '3.149',
+    parent: '2.14',
+    name: 'Saudi Arabia',
+    value: 1 // 36947025
+}, {
+    id: '3.150',
+    parent: '2.14',
+    name: 'Yemen',
+    value: 1 // 34449825
+}, {
+    id: '3.151',
+    parent: '2.14',
+    name: 'Syria',
+    value: 1 // 23227014
+}, {
+    id: '3.152',
+    parent: '2.14',
+    name: 'Jordan',
+    value: 1 // 11337053
+}, {
+    id: '3.153',
+    parent: '2.14',
+    name: 'Azerbaijan',
+    value: 1 // 10412652
+}, {
+    id: '3.154',
+    parent: '2.14',
+    name: 'United Arab Emirates',
+    value: 1 // 9516871
+}, {
+    id: '3.155',
+    parent: '2.14',
+    name: 'Israel',
+    value: 1 // 9174520
+}, {
+    id: '3.156',
+    parent: '2.14',
+    name: 'Palestine',
+    value: 1 // 5371230
+}, {
+    id: '3.157',
+    parent: '2.14',
+    name: 'Lebanon',
+    value: 1 // 5353930
+}, {
+    id: '3.158',
+    parent: '2.14',
+    name: 'Oman',
+    value: 1 // 4644384
+}, {
+    id: '3.159',
+    parent: '2.14',
+    name: 'Kuwait',
+    value: 1 // 4310108
+}, {
+    id: '3.160',
+    parent: '2.14',
+    name: 'Georgia',
+    value: 1 // 3728282
+}, {
+    id: '3.161',
+    parent: '2.14',
+    name: 'Armenia',
+    value: 1 // 2777971
+}, {
+    id: '3.162',
+    parent: '2.14',
+    name: 'Qatar',
+    value: 1 // 2716391
+}, {
+    id: '3.163',
+    parent: '2.14',
+    name: 'Bahrain',
+    value: 1 // 1485510
+}, {
+    id: '3.164',
+    parent: '2.14',
+    name: 'Cyprus',
+    value: 1 // 1260138
+},
+
+{
+    id: '2.10',
+    parent: '1.3',
+    name: 'Central Asia'
+},
+
+{
+    id: '3.114',
+    parent: '2.10',
+    name: 'Uzbekistan',
+    value: 1 // 35163944
+}, {
+    id: '3.115',
+    parent: '2.10',
+    name: 'Kazakhstan',
+    value: 1 // 19606634
+}, {
+    id: '3.116',
+    parent: '2.10',
+    name: 'Tajikistan',
+    value: 1 // 10143543
+}, {
+    id: '3.117',
+    parent: '2.10',
+    name: 'Kyrgyzstan',
+    value: 1 // 6735348
+}, {
+    id: '3.118',
+    parent: '2.10',
+    name: 'Turkmenistan',
+    value: 1 // 6516100
+},
+/** *********/
+
+/* Europe */
+{
+    id: '2.15',
+    parent: '1.4',
+    name: 'Eastern Europe'
+},
+
+{
+    id: '3.165',
+    parent: '2.15',
+    name: 'Russia',
+    value: 1 // 144444359
+}, {
+    id: '3.166',
+    parent: '2.15',
+    name: 'Poland',
+    value: 1 // 41026068
+}, {
+    id: '3.167',
+    parent: '2.15',
+    name: 'Ukraine',
+    value: 1 // 36744634
+}, {
+    id: '3.168',
+    parent: '2.15',
+    name: 'Romania',
+    value: 1 // 19892812
+}, {
+    id: '3.169',
+    parent: '2.15',
+    name: 'Czechia',
+    value: 1 // 10495295
+}, {
+    id: '3.170',
+    parent: '2.15',
+    name: 'Hungary',
+    value: 1 // 9604000
+}, {
+    id: '3.171',
+    parent: '2.15',
+    name: 'Belarus',
+    value: 1 // 9498238
+}, {
+    id: '3.172',
+    parent: '2.15',
+    name: 'Bulgaria',
+    value: 1 // 6687717
+}, {
+    id: '3.173',
+    parent: '2.15',
+    name: 'Slovakia',
+    value: 1 // 5795199
+}, {
+    id: '3.174',
+    parent: '2.15',
+    name: 'Moldova',
+    value: 1 // 3435931
+},
+
+{
+    id: '2.16',
+    parent: '1.4',
+    name: 'Northern Europe'
+},
+
+{
+    id: '3.175',
+    parent: '2.16',
+    name: 'United Kingdom',
+    value: 1 // 67736802
+}, {
+    id: '3.176',
+    parent: '2.16',
+    name: 'Sweden',
+    value: 1 // 10612086
+}, {
+    id: '3.177',
+    parent: '2.16',
+    name: 'Denmark',
+    value: 1 // 5910913
+}, {
+    id: '3.178',
+    parent: '2.16',
+    name: 'Finland',
+    value: 1 // 5545475
+}, {
+    id: '3.179',
+    parent: '2.16',
+    name: 'Norway',
+    value: 1 // 5474360
+}, {
+    id: '3.180',
+    parent: '2.16',
+    name: 'Ireland',
+    value: 1 // 5056935
+}, {
+    id: '3.181',
+    parent: '2.16',
+    name: 'Lithuania',
+    value: 1 // 2718352
+}, {
+    id: '3.182',
+    parent: '2.16',
+    name: 'Latvia',
+    value: 1 // 1830212
+}, {
+    id: '3.183',
+    parent: '2.16',
+    name: 'Estonia',
+    value: 1 // 1322766
+}, {
+    id: '3.184',
+    parent: '2.16',
+    name: 'Iceland',
+    value: 1 // 375319
+}, {
+    id: '3.185',
+    parent: '2.16',
+    name: 'Jersey',
+    value: 1 // 111803
+}, {
+    id: '3.186',
+    parent: '2.16',
+    name: 'Isle of Man',
+    value: 1 // 84710
+}, {
+    id: '3.187',
+    parent: '2.16',
+    name: 'Guernsey',
+    value: 1 // 63544
+}, {
+    id: '3.188',
+    parent: '2.16',
+    name: 'Faroe Islands',
+    value: 1 // 53270
+},
+
+{
+    id: '2.17',
+    parent: '1.4',
+    name: 'Southern Europe'
+},
+
+{
+    id: '3.189',
+    parent: '2.17',
+    name: 'Italy',
+    value: 1 // 58870763
+}, {
+    id: '3.190',
+    parent: '2.17',
+    name: 'Spain',
+    value: 1 // 47519628
+}, {
+    id: '3.191',
+    parent: '2.17',
+    name: 'Greece',
+    value: 1 // 10341277
+}, {
+    id: '3.192',
+    parent: '2.17',
+    name: 'Portugal',
+    value: 1 // 10247605
+}, {
+    id: '3.193',
+    parent: '2.17',
+    name: 'Serbia',
+    value: 1 // 7149077
+}, {
+    id: '3.194',
+    parent: '2.17',
+    name: 'Croatia',
+    value: 1 // 4008617
+}, {
+    id: '3.195',
+    parent: '2.17',
+    name: 'Bosnia and Herzegovina',
+    value: 1 // 3210848
+}, {
+    id: '3.196',
+    parent: '2.17',
+    name: 'Albania',
+    value: 1 // 2832439
+}, {
+    id: '3.197',
+    parent: '2.17',
+    name: 'Slovenia',
+    value: 1 // 2119675
+}, {
+    id: '3.198',
+    parent: '2.17',
+    name: 'North Macedonia',
+    value: 1 // 2085679
+}, {
+    id: '3.199',
+    parent: '2.17',
+    name: 'Kosovo',
+    value: 1 // 1663595
+}, {
+    id: '3.200',
+    parent: '2.17',
+    name: 'Montenegro',
+    value: 1 // 626485
+}, {
+    id: '3.201',
+    parent: '2.17',
+    name: 'Malta',
+    value: 1 // 535065
+}, {
+    id: '3.202',
+    parent: '2.17',
+    name: 'Andorra',
+    value: 1 // 80088
+}, {
+    id: '3.203',
+    parent: '2.17',
+    name: 'San Marino',
+    value: 1 // 33642
+}, {
+    id: '3.204',
+    parent: '2.17',
+    name: 'Gibraltar',
+    value: 1 // 32688
+}, {
+    id: '3.205',
+    parent: '2.17',
+    name: 'Vatican City',
+    value: 1 // 518
+},
+
+{
+    id: '2.18',
+    parent: '1.4',
+    name: 'Western Europe'
+},
+
+{
+    id: '3.206',
+    parent: '2.18',
+    name: 'Germany',
+    value: 1 // 83294633
+}, {
+    id: '3.207',
+    parent: '2.18',
+    name: 'France',
+    value: 1 // 64756584
+}, {
+    id: '3.208',
+    parent: '2.18',
+    name: 'Netherlands',
+    value: 1 // 17618299
+}, {
+    id: '3.209',
+    parent: '2.18',
+    name: 'Belgium',
+    value: 1 // 11686140
+}, {
+    id: '3.210',
+    parent: '2.18',
+    name: 'Austria',
+    value: 1 // 8958961
+}, {
+    id: '3.211',
+    parent: '2.18',
+    name: 'Switzerland',
+    value: 1 // 8796669
+}, {
+    id: '3.212',
+    parent: '2.18',
+    name: 'Luxembourg',
+    value: 1 // 654768
+}, {
+    id: '3.213',
+    parent: '2.18',
+    name: 'Liechtenstein',
+    value: 1 // 39585
+}, {
+    id: '3.214',
+    parent: '2.18',
+    name: 'Monaco',
+    value: 1 // 36298
+},
+/** *********/
+
+/* Oceania */
+{
+    id: '2.19',
+    parent: '1.5',
+    name: 'Australia and New Zealand'
+},
+
+{
+    id: '3.215',
+    parent: '2.19',
+    name: 'Australia',
+    value: 1 // 26439112
+}, {
+    id: '3.216',
+    parent: '2.19',
+    name: 'New Zealand',
+    value: 1 // 5228100
+},
+
+{
+    id: '2.20',
+    parent: '1.5',
+    name: 'Melanesia'
+},
+
+{
+    id: '3.217',
+    parent: '2.20',
+    name: 'Papua New Guinea',
+    value: 1 // 10329931
+}, {
+    id: '3.218',
+    parent: '2.20',
+    name: 'Fiji',
+    value: 1 // 936376
+}, {
+    id: '3.219',
+    parent: '2.20',
+    name: 'Solomon Islands',
+    value: 1 // 740425
+}, {
+    id: '3.220',
+    parent: '2.20',
+    name: 'Vanuatu',
+    value: 1 // 334506
+}, {
+    id: '3.221',
+    parent: '2.20',
+    name: 'New Caledonia',
+    value: 1 // 292991
+},
+
+{
+    id: '2.21',
+    parent: '1.5',
+    name: 'Micronesia'
+},
+
+{
+    id: '3.222',
+    parent: '2.21',
+    name: 'Guam',
+    value: 1 // 172952
+}, {
+    id: '3.223',
+    parent: '2.21',
+    name: 'Kiribati',
+    value: 1 // 133515
+}, {
+    id: '3.224',
+    parent: '2.21',
+    name: 'Micronesia',
+    value: 1 // 115224
+}, {
+    id: '3.225',
+    parent: '2.21',
+    name: 'Northern Mariana Islands',
+    value: 1 // 49796
+}, {
+    id: '3.226',
+    parent: '2.21',
+    name: 'Marshall Islands',
+    value: 1 // 41996
+}, {
+    id: '3.227',
+    parent: '2.21',
+    name: 'Palau',
+    value: 1 // 18058
+}, {
+    id: '3.228',
+    parent: '2.21',
+    name: 'Nauru',
+    value: 1 // 12780
+},
+
+{
+    id: '2.22',
+    parent: '1.5',
+    name: 'Polynesia'
+},
+
+{
+    id: '3.229',
+    parent: '2.22',
+    name: 'French Polynesia',
+    value: 1 // 308872
+}, {
+    id: '3.230',
+    parent: '2.22',
+    name: 'Samoa',
+    value: 1 // 225681
+}, {
+    id: '3.231',
+    parent: '2.22',
+    name: 'Tonga',
+    value: 1 // 107773
+}, {
+    id: '3.232',
+    parent: '2.22',
+    name: 'American Samoa',
+    value: 1 // 43915
+}, {
+    id: '3.233',
+    parent: '2.22',
+    name: 'Cook Islands',
+    value: 1 // 17044
+}, {
+    id: '3.234',
+    parent: '2.22',
+    name: 'Wallis and Futuna',
+    value: 1 // 11502
+}, {
+    id: '3.235',
+    parent: '2.22',
+    name: 'Tuvalu',
+    value: 1 // 11396
+}, {
+    id: '3.236',
+    parent: '2.22',
+    name: 'Niue',
+    value: 1 // 1935
+}, {
+    id: '3.237',
+    parent: '2.22',
+    name: 'Tokelau',
+    value: 1 // 1893
+}, {
+    id: '3.238',
+    parent: '2.22',
+    name: 'Pitcairn Islands',
+    value: 1 // 45
+}];
+
+createChart(data);
+
+		</script>
+	</body>
+</html>
