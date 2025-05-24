@@ -1,184 +1,149 @@
+
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Highmaps Example</title>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CPA – Mapa de Localidades</title>
 
-		<style type="text/css">
-            *{margin: 0; padding: 0;}
-#container {
-    height: 680px;
-    min-width: 310px;
-    max-width: 800px;
-    margin: 0 auto;
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        height: 680px;
+        min-width: 310px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .loading {
+        margin-top: 10em;
+        text-align: center;
+        color: gray;
+      }
+
+      header {
+        width: 100%;
+        background-color: #f5f5f7;
+        border-bottom: 1px solid #ddd;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+      }
+
+      .header-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", sans-serif;
+      }
+
+      .header-title {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #1d1d1f;
+      }
+
+      .back-link {
+        font-size: 0.95rem;
+        color: #0071e3;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+
+      .back-link:hover {
+        color: #005bb5;
+      }
+      @media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .header-title {
+    font-size: 1rem;
+  }
+
+  .back-link {
+    font-size: 0.9rem;
+  }
 }
 
-.loading {
-    margin-top: 10em;
-    text-align: center;
-    color: gray;
-}
-header {
-  width: 100%;
-  background-color: #f5f5f7;
-  border-bottom: 1px solid #ddd;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <span class="header-title">CPA – Centro de Pesquisa Aplicada</span>
+        <a href="./index.html" class="back-link">← Voltar</a>
+      </div>
+    </header>
 
-.header-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-}
+    <script src="./src-mapa/code/highmaps.js"></script>
+    <script src="./src-mapa/code/modules/exporting.js"></script>
+    <script src="./src-mapa/code/modules/offline-exporting.js"></script>
+    <script src="./src-mapa/code/modules/accessibility.js"></script>
 
-.header-title {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #1d1d1f;
-}
+    <div id="container"></div>
 
-.back-link {
-  font-size: 0.95rem;
-  color: #0071e3;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.back-link:hover {
-  color: #005bb5;
-}
-
-
-		</style>
-	</head>
-	<body>
-        <header>
-            <div class="header-container">
-                <span class="header-title">CPA – Centro de Pesquisa Aplicada</span>
-                <a href="./index.html" class="back-link">← Voltar</a>
-            </div>
-        </header>
-<script src="./src-mapa/code/highmaps.js"></script>
-<script src="./src-mapa/code/modules/exporting.js"></script>
-<script src="./src-mapa/code/modules/offline-exporting.js"></script>
-<script src="./src-mapa/code/modules/accessibility.js"></script>
-
-<div id="container"></div>
-
-
-		<script type="text/javascript">
-(async () => {
-
-    const topology = await fetch(
-        'https://code.highcharts.com/mapdata/countries/gb/gb-all.topo.json'
-    ).then(response => response.json());
-
-    // Initialize the chart
-    Highcharts.mapChart('container', {
-
-        chart: {
+    <script>
+      Promise.all([
+        fetch('https://code.highcharts.com/mapdata/countries/gb/gb-all.topo.json').then(res => res.json()),
+        fetch('./dados-mapa.json').then(res => res.json())
+      ])
+      .then(([topology, points]) => {
+        Highcharts.mapChart('container', {
+          chart: {
             map: topology
-        },
-
-        title: {
-            text: 'Highmaps basic lat/lon demo'
-        },
-
-        accessibility: {
-            description: 'Map where city locations have been defined using ' +
-                'latitude/longitude.'
-        },
-
-        mapNavigation: {
+          },
+          title: {
+            text: 'Mapa de Localidades'
+          },
+          accessibility: {
+            description: 'Mapa com pontos definidos por latitude e longitude.'
+          },
+          mapNavigation: {
             enabled: true
-        },
-
-        tooltip: {
+          },
+          tooltip: {
             headerFormat: '',
-            pointFormat: '<b>{point.name}</b><br>Lat: {point.lat}, Lon: ' +
-                '{point.lon}'
-        },
-
-        series: [{
-            // Use the gb-all map with no data as a basemap
+            pointFormat: '<b>{point.name}</b><br>Lat: {point.lat}, Lon: {point.lon}'
+          },
+          series: [{
             name: 'Great Britain',
             borderColor: '#A0A0A0',
             nullColor: 'rgba(200, 200, 200, 0.3)',
             showInLegend: false
-        }, {
+          }, {
             name: 'Separators',
             type: 'mapline',
             nullColor: '#707070',
             showInLegend: false,
             enableMouseTracking: false,
-            accessibility: {
-                enabled: false
-            }
-        }, {
-            // Specify points using lat/lon
+            accessibility: { enabled: false }
+          }, {
             type: 'mappoint',
-            name: 'Cities',
-            accessibility: {
-                point: {
-                    valueDescriptionFormat: '{xDescription}. Lat: ' +
-                        '{point.lat:.2f}, lon: {point.lon:.2f}.'
-                }
-            },
+            name: 'Localidades',
             color: Highcharts.getOptions().colors[1],
-            data: [{
-                name: 'London',
-                lat: 51.507222,
-                lon: -0.1275
-            }, {
-                name: 'Birmingham',
-                lat: 52.483056,
-                lon: -1.893611
-            }, {
-                name: 'Leeds',
-                lat: 53.799722,
-                lon: -1.549167
-            }, {
-                name: 'Glasgow',
-                lat: 55.858,
-                lon: -4.259
-            }, {
-                name: 'Sheffield',
-                lat: 53.383611,
-                lon: -1.466944
-            }, {
-                name: 'Liverpool',
-                lat: 53.4,
-                lon: -3
-            }, {
-                name: 'Bristol',
-                lat: 51.45,
-                lon: -2.583333
-            }, {
-                name: 'Belfast',
-                lat: 54.597,
-                lon: -5.93
-            }, {
-                name: 'Lerwick',
-                lat: 60.155,
-                lon: -1.145,
-                dataLabels: {
-                    align: 'left',
-                    x: 5,
-                    verticalAlign: 'middle'
-                }
-            }]
-        }]
-    });
-
-})();
-		</script>
-	</body>
+            accessibility: {
+              point: {
+                valueDescriptionFormat: '{xDescription}. Lat: {point.lat:.2f}, lon: {point.lon:.2f}.'
+              }
+            },
+            data: points
+          }]
+        });
+      })
+      .catch(error => console.error('Erro ao carregar mapa ou dados:', error));
+    </script>
+  </body>
 </html>
