@@ -1,48 +1,303 @@
 [
   {
-    "name": "London",
-    "lat": 51.507222,
-    "lon": -0.1275
+    "name": "U.S. Meat Animal Research Center (USMARC) \u2013 USDA ARS",
+    "lat": 40.524733,
+    "lon": -98.108725
   },
   {
-    "name": "Birmingham",
-    "lat": 52.483056,
-    "lon": -1.893611
+    "name": "China Meat Research Center (CMRC)",
+    "lat": 39.8483,
+    "lon": 116.3724
   },
   {
-    "name": "Leeds",
-    "lat": 53.799722,
-    "lon": -1.549167
+    "name": "ICAR \u2013 National Research Centre on Meat (NRCM)",
+    "lat": 17.435955,
+    "lon": 78.614862
   },
   {
-    "name": "Glasgow",
-    "lat": 55.858,
-    "lon": -4.259
+    "name": "Orr Beef Research Center",
+    "lat": 39.7265,
+    "lon": -90.914
   },
   {
-    "name": "Sheffield",
-    "lat": 53.383611,
-    "lon": -1.466944
+    "name": "China Meat Food Comprehensive Research Center (CMFCRC)",
+    "lat": 39.916668,
+    "lon": 116.383331
   },
   {
-    "name": "Liverpool",
-    "lat": 53.4,
-    "lon": -3
+    "name": "Ontario Beef Research Centre \u2013 Elora",
+    "lat": 43.637,
+    "lon": -80.405
   },
   {
-    "name": "Bristol",
-    "lat": 51.45,
-    "lon": -2.583333
+    "name": "Beef Carcass Research Center (BCRC) \u2013 WTAMU",
+    "lat": 35.1882,
+    "lon": -101.9195
   },
   {
-    "name": "Belfast",
-    "lat": 54.597,
-    "lon": -5.93
+    "name": "Meat Science and Innovation Center Honoring Ron Richard \u2013 University of Idaho",
+    "lat": 46.731,
+    "lon": -117.0
   },
   {
-    "name": "Lerwick",
-    "lat": 60.155,
-    "lon": -1.145,
+    "name": "Division of Meat Animal and Poultry Research \u2013 NILGS/NARO",
+    "lat": 36.0048,
+    "lon": 140.0981
+  },
+  {
+    "name": "Danish Meat Research Institute (DMRI) \u2013 Danish Technological Institute",
+    "lat": 55.6515,
+    "lon": 12.2921
+  },
+  {
+    "name": "Meat Industry Centre (MIC) \u2013 Agricultural Research Council (ARC)",
+    "lat": -25.7455,
+    "lon": 28.2314
+  },
+  {
+    "name": "Meat Industry Research Institute of New Zealand (MIRINZ)",
+    "lat": -37.7666,
+    "lon": 175.3017
+  },
+  {
+    "name": "Beef Research Institute (BRI) \u2013 KALRO",
+    "lat": -0.3057,
+    "lon": 36.0896
+  },
+  {
+    "name": "Abattoir & Meat Research \u2013 FBN (Forschungsinstitut f\u00fcr Nutztierbiologie)",
+    "lat": 54.075,
+    "lon": 12.2464
+  },
+  {
+    "name": "Grange Animal & Grassland Research Centre \u2013 Teagasc",
+    "lat": 53.5219,
+    "lon": -6.6523
+  },
+  {
+    "name": "Centre for Animal Production and Health \u2013 Murdoch University",
+    "lat": -32.0665,
+    "lon": 115.835
+  },
+  {
+    "name": "Meat & Livestock Australia (MLA)",
+    "lat": -33.8323,
+    "lon": 151.209
+  },
+  {
+    "name": "Meat Institute Education & Training (MEAT) Center",
+    "lat": 38.9072,
+    "lon": -77.0369
+  },
+  {
+    "name": "American Meat Science Association (AMSA)",
+    "lat": 39.3678,
+    "lon": -94.3627
+  },
+  {
+    "name": "International Meat Secretariat (IMS)",
+    "lat": 48.8645,
+    "lon": 2.3987
+  },
+  {
+    "name": "European Federation of Food Science and Technology (EFFoST)",
+    "lat": 51.9692,
+    "lon": 5.6654
+  },
+  {
+    "name": "China Meat Association (CMA)",
+    "lat": 39.9097,
+    "lon": 116.3659
+  },
+  {
+    "name": "Food Technology Institute (ITAL) \u2013 Meat Technology Center (CTC)",
+    "lat": -22.8987,
+    "lon": -47.0632
+  },
+  {
+    "name": "Canadian Meat Science Association (CMSA)",
+    "lat": 43.7056,
+    "lon": -80.3733
+  },
+  {
+    "name": "Food Science and Technology Association of Thailand (FoSTAT)",
+    "lat": 13.7649,
+    "lon": 100.5383
+  },
+  {
+    "name": "Brazilian Society of Food Science and Technology (BSFST)",
+    "lat": -22.8987,
+    "lon": -47.0632
+  },
+  {
+    "name": "National Meat Institute (INAC)",
+    "lat": -34.906,
+    "lon": -56.203
+  },
+  {
+    "name": "African German Centre for Sustainable and Resilient Food Systems and Applied Agricultural and Food Data Science (UKUDLA)",
+    "lat": 48.7123,
+    "lon": 9.2106
+  },
+  {
+    "name": "JBS Biotech Innovation Center at Sapiens Park",
+    "lat": -27.4784,
+    "lon": -48.5192
+  },
+  {
+    "name": "Center for Meat Safety & Quality (CMSQ), Colorado State University",
+    "lat": 40.5734,
+    "lon": -105.0865
+  },
+  {
+    "name": "International Goat Research Center \u2013 Prairie View A&M University",
+    "lat": 30.0935,
+    "lon": -95.9869
+  },
+  {
+    "name": "Angelo State University \u2013 Management, Instruction and Research Center (MIR)",
+    "lat": 31.8236,
+    "lon": -100.5173
+  },
+  {
+    "name": "Institute of Food and Agricultural Sciences (UF/IFAS), University of Florida",
+    "lat": 29.6439,
+    "lon": -82.3557
+  },
+  {
+    "name": "Embrapa Beef Cattle",
+    "lat": -20.4506,
+    "lon": -54.7175
+  },
+  {
+    "name": "Michael L. Parson Meat Science Education and Training Lab, University of Missouri",
+    "lat": 38.9404,
+    "lon": -92.3277
+  },
+  {
+    "name": "Danish Meat Research Institute (DMRI), Danish Technological Institute",
+    "lat": 55.6594,
+    "lon": 12.2718
+  },
+  {
+    "name": "CECAV \u2013 Center for Research in Agro-Environmental & Biological Tech",
+    "lat": 41.2956,
+    "lon": -7.738
+  },
+  {
+    "name": "Bene Meat Technologies",
+    "lat": 50.0969,
+    "lon": 14.3461
+  },
+  {
+    "name": "Uiseong Cell Culture Food Tech Research Support Center",
+    "lat": 36.3521,
+    "lon": 128.6811
+  },
+  {
+    "name": "Good Food Institute Asia Pacific (GFI APAC)",
+    "lat": 1.3521,
+    "lon": 103.8198
+  },
+  {
+    "name": "International Livestock Research Institute (ILRI)",
+    "lat": -1.2921,
+    "lon": 36.8219
+  },
+  {
+    "name": "Red Meat Research & Development South Africa (RMRD SA) / Red Meat Industry Services (RMIS)",
+    "lat": -25.7845,
+    "lon": 28.3161
+  },
+  {
+    "name": "AGWA and Believer Meats \u2013 Cultivated Meat Research Center",
+    "lat": 24.4539,
+    "lon": 54.3773
+  },
+  {
+    "name": "Davies Livestock Research Centre \u2013 University of Adelaide",
+    "lat": -34.5228,
+    "lon": 138.7328
+  },
+  {
+    "name": "Centre for Animal Science \u2013 University of Queensland (UQ)",
+    "lat": -27.4975,
+    "lon": 153.0137
+  },
+  {
+    "name": "Meat Science Group \u2013 University of New England (UNE)",
+    "lat": -30.4883,
+    "lon": 151.6447
+  },
+  {
+    "name": "Embrapa Pecu\u00e1ria Sudeste",
+    "lat": -22.0144,
+    "lon": -47.8978
+  },
+  {
+    "name": "Meat Science Research \u2013 University of Nebraska\u2013Lincoln",
+    "lat": 40.8202,
+    "lon": -96.7005
+  },
+  {
+    "name": "Beef Cattle Research Center \u2013 Kansas State University",
+    "lat": 39.202,
+    "lon": -96.5889
+  },
+  {
+    "name": "Willard Sparks Beef Research Center \u2013 Oklahoma State University",
+    "lat": 36.1228,
+    "lon": -97.1168
+  },
+  {
+    "name": "Meat Science \u2013 University of Minnesota",
+    "lat": 44.9833,
+    "lon": -93.1817
+  },
+  {
+    "name": "Meat Science Research Focus \u2013 Iowa State University",
+    "lat": 42.0267,
+    "lon": -93.6465
+  },
+  {
+    "name": "Beef Cattle Research Council (BCRC)",
+    "lat": 51.0447,
+    "lon": -114.0719
+  },
+  {
+    "name": "Kenya Agricultural and Livestock Research Organization \u2013 Beef Research Institute (KALRO\u2013BRI)",
+    "lat": -0.2833,
+    "lon": 36.0667
+  },
+  {
+    "name": "University of the Philippines Los Ba\u00f1os \u2013 Meat Science Laboratory",
+    "lat": 14.167,
+    "lon": 121.243
+  },
+  {
+    "name": "NeutroPec \u2013 Center for Science for Climate Neutrality in Beef Cattle Production",
+    "lat": -20.811,
+    "lon": -49.375
+  },
+  {
+    "name": "General Villegas Experimental Agricultural Station (INTA)",
+    "lat": -35.03,
+    "lon": -63.03
+  },
+  {
+    "name": "Institute for Biotechnology Research \u2013 National University of San Mart\u00edn (IIB-UNSAM)",
+    "lat": -34.574,
+    "lon": -58.52
+  },
+  {
+    "name": "National Research Center for Beef Cattle \u2013 Embrapa Gado de Corte",
+    "lat": -20.4506,
+    "lon": -54.7175
+  },
+  {
+    "name": "CPA ",
+    "lat": -22.703945,
+    "lon": -47.632291,
     "dataLabels": {
       "align": "left",
       "x": 5,

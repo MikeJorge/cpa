@@ -13,9 +13,9 @@
       }
 
       #container {
-        height: 680px;
+        height: 900px;
         min-width: 310px;
-        max-width: 800px;
+        max-width: 1200px;
         margin: 0 auto;
       }
 
@@ -97,7 +97,7 @@
 
     <script>
       Promise.all([
-        fetch('https://code.highcharts.com/mapdata/countries/gb/gb-all.topo.json').then(res => res.json()),
+        fetch('https://code.highcharts.com/mapdata/custom/world-highres2.topo.json').then(res => res.json()),
         fetch('./dados-mapa.json').then(res => res.json())
       ])
       .then(([topology, points]) => {
