@@ -1,62 +1,62 @@
-# Centro de Pesquisa Aplicada (CPA) – Visualização Estratégica de Dados
+# Applied Research Center (CPA) – Strategic Data Visualization
 
-Este repositório contém a estrutura de visualização de dados utilizada para sustentar a proposta e apresentação do **Centro de Pesquisa Aplicada (CPA)**, com sede na **Esalq-USP**, fruto de uma iniciativa conjunta da **Minerva Foods** e da **FAPESP**.
+This repository contains the structure and visualizations used to support the proposal and presentation of the **Applied Research Center (CPA)**, headquartered at **Esalq-USP**, a joint initiative by **Minerva Foods** and **FAPESP** (São Paulo Research Foundation).
 
-🔗 Acesse a visualização principal:  
+🔗 Main visualization link:  
 [https://mikejorge.github.io/cpa/mandala.html](https://mikejorge.github.io/cpa/mandala.html)
 
 ---
 
-## 🎯 Objetivo do Projeto
+## 🎯 Project Objective
 
-Evidenciar, por meio de dados e análises visuais, a **importância estratégica da criação de um novo CPA em proteína animal no Brasil**, com foco na **integração de toda a cadeia produtiva – do pasto ao prato**.
+This initiative aims to demonstrate — through intelligent data analysis and impactful visual narratives — the **strategic relevance of establishing a new CPA in Brazil focused on animal protein research**, integrating the **entire value chain from pasture to plate**.
 
-Este projeto visa:
-- Identificar lacunas globais na pesquisa aplicada em proteína animal.
-- Destacar a baixa representatividade de centros com foco em **regiões tropicais**.
-- Demonstrar a carência de centros com atuação integrada e impacto direto na **inovação industrial, rastreabilidade, sustentabilidade e consumo**.
-- Sustentar a proposta do CPA como uma **iniciativa única, multidisciplinar e orientada a resultados práticos**, conectando universidade, indústria e sociedade.
-
----
-
-## 🔍 O que este repositório oferece
-
-- Visualizações com base em dados reais de centros de pesquisa em proteína animal ao redor do mundo.
-- Mapas, gráficos e redes interativas construídas com **Highcharts** para:
-  - Localização geográfica de centros existentes
-  - Comparação entre regiões e países
-  - Análise de foco temático, inovação e cooperação internacional
-  - Evidência de **gaps estratégicos** onde o CPA brasileiro se posiciona como diferencial
-- Estrutura para dashboards interativos integráveis em páginas HTML
+The project is designed to:
+- Identify global gaps in applied research dedicated to animal protein systems.
+- Highlight the underrepresentation of research centers with a focus on **tropical production systems**.
+- Emphasize the lack of institutions with **holistic, end-to-end integration** across production, nutrition, genetics, processing, traceability, and consumer health.
+- Position the CPA as a **unique, interdisciplinary, and innovation-driven initiative**, bridging academia, industry, and society.
 
 ---
 
-## 📊 Tecnologias utilizadas
+## 🔍 What This Repository Provides
 
-- **Highcharts JS** – Visualizações interativas e responsivas
-- **Pandas / Python** – Pré-processamento e análise dos dados
-- **Jupyter / ChatGPT** – Suporte analítico e estratégico
-- **GitHub Pages** – Hospedagem das visualizações para fácil acesso institucional
-
----
-
-## 📁 Estrutura dos Dados
-
-Os dados foram preparados nos formatos:
-- `centros_pesquisa_highcharts.json` – Para uso direto com Highcharts
-- `centros_pesquisa_highcharts.csv` – Para manipulação e integração com outras ferramentas
+- Data-driven visualizations based on verified international datasets of animal protein research centers.
+- Interactive maps, bar charts, network graphs, and radar plots developed with **Highcharts** to illustrate:
+  - Geospatial distribution of existing research institutions
+  - Cross-country and regional comparisons
+  - Thematic clustering (e.g., genomics, sustainability, processing)
+  - Innovation output, research intensity, and international cooperation
+  - Strategic **gaps and opportunities** where the CPA will deliver high impact
 
 ---
 
-## 🤝 Apoio Institucional
+## 📊 Tools and Technologies
 
-Este projeto é apoiado por:
+- **Highcharts JS** – Interactive, responsive data visualizations
+- **Pandas / Python** – Data wrangling and pre-processing
+- **Jupyter / ChatGPT** – Analytical and narrative design
+- **GitHub Pages** – Lightweight hosting for interactive public dashboards
+
+---
+
+## 📁 Data Structure
+
+The dataset is available in two formats:
+- `centros_pesquisa_highcharts.json` – Ready-to-use JSON for Highcharts integration
+- `centros_pesquisa_highcharts.csv` – For data manipulation, reporting, or dashboarding
+
+---
+
+## 🤝 Institutional Support
+
+This initiative is supported by:
 - **Minerva Foods**
-- **FAPESP**
-- **Esalq-USP**
+- **São Paulo Research Foundation (FAPESP)**
+- **Luiz de Queiroz College of Agriculture – Esalq/USP**
 
 ---
 
-## 💬 Contato
+## 💬 Contact
 
-Para contribuições, dúvidas ou parcerias, entre em contato com [mikejorge](https://github.com/mikejorge) ou utilize a aba de *Issues* deste repositório.
+For contributions, inquiries, or partnership discussions, please reach out via [GitHub Issues](https://github.com/mikejorge/cpa/issues) or contact [mikejorge](https://github.com/mikejorge) directly.
