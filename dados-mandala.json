@@ -24,12 +24,6 @@
     "_coment": "Item do eixo principal"
   },
   {
-    "id": "1.4",
-    "parent": "0.0",
-    "name": "ODS da ONU",
-    "_coment": "Item do eixo principal"
-  },
-  {
     "id": "1.5",
     "parent": "0.0",
     "name": "Bioenergia",
@@ -296,69 +290,6 @@
     "name": "(Em desenvolvimento)",
     "value": 1,
     "_coment": "Item em Produto > LP5 > Saúde humana"
-  },
-  {
-    "id": "5.1",
-    "parent": "1.4",
-    "name": "Erradicação da pobreza",
-    "value": 1,
-    "_coment": "Item de ODS ONU"
-  },
-  {
-    "id": "5.2",
-    "parent": "1.4",
-    "name": "Fome zero e agricultura sustentável",
-    "value": 1,
-    "_coment": "Item de ODS ONU"
-  },
-  {
-    "id": "5.3",
-    "parent": "1.4",
-    "name": "Saúde e bem-estar",
-    "value": 1,
-    "_coment": "Item de ODS ONU"
-  },
-  {
-    "id": "5.4",
-    "parent": "1.4",
-    "name": "Energia limpa e acessível",
-    "value": 1,
-    "_coment": "Item de ODS ONU"
-  },
-  {
-    "id": "5.5",
-    "parent": "1.4",
-    "name": "Indústria, inovação e infraestrutura",
-    "value": 1,
-    "_coment": "Item de ODS ONU"
-  },
-  {
-    "id": "5.6",
-    "parent": "1.4",
-    "name": "Consumo e produção responsáveis",
-    "value": 1,
-    "_coment": "Item de ODS ONU"
-  },
-  {
-    "id": "5.7",
-    "parent": "1.4",
-    "name": "Vida terrestre",
-    "value": 1,
-    "_coment": "Item de ODS ONU"
-  },
-  {
-    "id": "5.8",
-    "parent": "1.4",
-    "name": "ação contra a mudança global do clima",
-    "value": 1,
-    "_coment": "Item de ODS ONU"
-  },
-  {
-    "id": "5.9",
-    "parent": "1.4",
-    "name": "Parcerias e meios de implementação",
-    "value": 1,
-    "_coment": "Item de ODS ONU"
   },
   {
     "id": "6.1",

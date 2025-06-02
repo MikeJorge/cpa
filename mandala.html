@@ -134,7 +134,9 @@ header {
     </p>
 </figure>
 <script>
-fetch('./dados-mandala.json')
+// fetch('./dados-mandala.json')
+// fetch('./dados-mandala-cpa-onepec.json')
+fetch('./dados-mandala-cpa-onepec-reestruturado.json')
   .then(response => response.json())
   .then(data => {
     Highcharts.chart('container', {
@@ -152,7 +154,7 @@ fetch('./dados-mandala.json')
         dataLabels: {
           useHTML: true,
           formatter: function () {
-            // Centraliza o conteúdo com quebra de linha estilizada
+            // Centraliza o conteúdo com quebra de linha estilfizada
             if (this.point.id === '0.0') {
               return `
                 <div style="text-align:center; line-height:1.3;">
