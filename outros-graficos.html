@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Outros Gráficos - CPA</title>
+  <style>
+    :root {
+      --primary: #0071e3;
+      --primary-hover: #005bb5;
+      --text-color: #1d1d1f;
+      --subtext-color: #515154;
+      --bg-color: #f5f5f7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      padding: 0 2rem 2rem 2rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      color: var(--primary);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2rem;
+      width: 100%;
+      max-width: 800px;
+    }
+    li {
+      margin: 0.3rem 0;
+    }
+    a {
+      display: block;
+      padding: 0.5rem 1rem;
+      background-color: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      font-size: 0.95rem;
+    }
+    a:hover {
+      background-color: var(--primary-hover);
+    }
+
+
+header {
+  width: 100%;
+  background-color: #f5f5f7;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  margin-bottom: 30px;
+}
+
+.header-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+.header-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1d1d1f;
+}
+
+.back-link {
+  font-size: 0.95rem;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  background-color: #eaeaea;
+}
+
+.back-link:hover {
+  font-size: 0.95rem;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  background-color: #eaeaea;
+}
+
+.back-link:hover {
+  color: #005bb5;
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .header-title {
+    font-size: 1rem;
+  }
+
+  .back-link {
+    font-size: 0.9rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+    <header>
+            <div class="header-container">
+                <span class="header-title">CPA – Centro de Pesquisa Aplicada</span>
+                <a href="./index.html" class="back-link">← Voltar</a>
+            </div>
+        </header>
+  <h1>Outros Gráficos</h1>
+  <p>Explore os exemplos disponíveis nas bibliotecas Highcharts:</p>
+  <h2>Highcharts Core</h2>
+  <ul>
+    <li><a href="lib-charts/highcharts-core/examples/3d-area-multiple/index.html" target="_blank">3D Area Multiple</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/3d-column-interactive/index.html" target="_blank">3D Column Interactive</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/3d-column-null-values/index.html" target="_blank">3D Column Null Values</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/3d-column-stacking-grouping/index.html" target="_blank">3D Column Stacking Grouping</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/3d-pie/index.html" target="_blank">3D Pie</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/3d-pie-donut/index.html" target="_blank">3D Pie Donut</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/3d-scatter-draggable/index.html" target="_blank">3D Scatter Draggable</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/accessible-line/index.html" target="_blank">Accessible Line</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/accessible-pie/index.html" target="_blank">Accessible Pie</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/advanced-accessible/index.html" target="_blank">Advanced Accessible</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/all-instruments/index.html" target="_blank">All Instruments</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/annotations/index.html" target="_blank">Annotations</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/arc-diagram/index.html" target="_blank">Arc Diagram</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/area-chart/index.html" target="_blank">Area Chart</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/area-inverted/index.html" target="_blank">Area Inverted</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/area-missing/index.html" target="_blank">Area Missing</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/area-negative/index.html" target="_blank">Area Negative</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/area-race-chart/index.html" target="_blank">Area Race Chart</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/area-stacked/index.html" target="_blank">Area Stacked</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/area-stacked-inverted/index.html" target="_blank">Area Stacked Inverted</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/area-stacked-percent/index.html" target="_blank">Area Stacked Percent</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/arearange/index.html" target="_blank">Arearange</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/arearange-line/index.html" target="_blank">Arearange Line</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/areaspline/index.html" target="_blank">Areaspline</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/audio-boxplot/index.html" target="_blank">Audio Boxplot</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/bar-chart/index.html" target="_blank">Bar Chart</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/bar-force/index.html" target="_blank">Bar Force</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/bar-negative-stack/index.html" target="_blank">Bar Negative Stack</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/bar-race/index.html" target="_blank">Bar Race</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/bar-stacked/index.html" target="_blank">Bar Stacked</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/bellcurve/index.html" target="_blank">Bellcurve</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/box-plot/index.html" target="_blank">Box Plot</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/bubble/index.html" target="_blank">Bubble</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/bubble-3d/index.html" target="_blank">Bubble 3D</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/bullet-graph/index.html" target="_blank">Bullet Graph</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/calendar-heatmap-month/index.html" target="_blank">Calendar Heatmap Month</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/chart-update/index.html" target="_blank">Chart Update</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/column-basic/index.html" target="_blank">Column Basic</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/column-comparison/index.html" target="_blank">Column Comparison</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/column-drilldown/index.html" target="_blank">Column Drilldown</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/column-negative/index.html" target="_blank">Column Negative</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/column-parsed/index.html" target="_blank">Column Parsed</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/column-placement/index.html" target="_blank">Column Placement</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/column-pyramid/index.html" target="_blank">Column Pyramid</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/column-rotated-labels/index.html" target="_blank">Column Rotated Labels</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/column-stacked/index.html" target="_blank">Column Stacked</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/column-stacked-and-grouped/index.html" target="_blank">Column Stacked And Grouped</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/column-stacked-percent/index.html" target="_blank">Column Stacked Percent</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/columnrange/index.html" target="_blank">Columnrange</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/combo/index.html" target="_blank">Combo</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/combo-data-resolution/index.html" target="_blank">Combo Data Resolution</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/combo-dual-axes/index.html" target="_blank">Combo Dual Axes</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/combo-meteogram/index.html" target="_blank">Combo Meteogram</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/combo-multi-axes/index.html" target="_blank">Combo Multi Axes</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/combo-regression/index.html" target="_blank">Combo Regression</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/combo-timeline/index.html" target="_blank">Combo Timeline</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/cylinder/index.html" target="_blank">Cylinder</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/dependency-wheel/index.html" target="_blank">Dependency Wheel</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/donut-chart/index.html" target="_blank">Donut Chart</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/donut-race/index.html" target="_blank">Donut Race</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/dumbbell/index.html" target="_blank">Dumbbell</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/dumbbell-markers/index.html" target="_blank">Dumbbell Markers</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/dynamic-click-to-add/index.html" target="_blank">Dynamic Click To Add</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/dynamic-master-detail/index.html" target="_blank">Dynamic Master Detail</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/dynamic-update/index.html" target="_blank">Dynamic Update</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/error-bar/index.html" target="_blank">Error Bar</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/euler-diagram/index.html" target="_blank">Euler Diagram</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/fan-chart/index.html" target="_blank">Fan Chart</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/flame/index.html" target="_blank">Flame</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/funnel/index.html" target="_blank">Funnel</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/funnel3d/index.html" target="_blank">Funnel3D</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/gauge-clock/index.html" target="_blank">Gauge Clock</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/gauge-dual/index.html" target="_blank">Gauge Dual</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/gauge-multiple-kpi/index.html" target="_blank">Gauge Multiple Kpi</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/gauge-solid/index.html" target="_blank">Gauge Solid</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/gauge-speedometer/index.html" target="_blank">Gauge Speedometer</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/gauge-vu-meter/index.html" target="_blank">Gauge Vu Meter</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/heatmap/index.html" target="_blank">Heatmap</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/heatmap-canvas/index.html" target="_blank">Heatmap Canvas</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/heatmap-interpolation/index.html" target="_blank">Heatmap Interpolation</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/histogram/index.html" target="_blank">Histogram</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/honeycomb-usa/index.html" target="_blank">Honeycomb Usa</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/horizontal-organization-chart/index.html" target="_blank">Horizontal Organization Chart</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/i18n/index.html" target="_blank">I18N</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/line-boost/index.html" target="_blank">Line Boost</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/line-chart/index.html" target="_blank">Line Chart</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/line-csv/index.html" target="_blank">Line Csv</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/line-custom-entrance-animation/index.html" target="_blank">Line Custom Entrance Animation</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/line-forecast/index.html" target="_blank">Line Forecast</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/line-labels/index.html" target="_blank">Line Labels</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/line-log-axis/index.html" target="_blank">Line Log Axis</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/line-time-series/index.html" target="_blank">Line Time Series</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/live-data/index.html" target="_blank">Live Data</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/lollipop/index.html" target="_blank">Lollipop</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/network-graph/index.html" target="_blank">Network Graph</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/neural-network/index.html" target="_blank">Neural Network</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/organization-chart/index.html" target="_blank">Organization Chart</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/organization-hanging/index.html" target="_blank">Organization Hanging</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/packed-bubble/index.html" target="_blank">Packed Bubble</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/packed-bubble-project-status/index.html" target="_blank">Packed Bubble Project Status</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/packed-bubble-split/index.html" target="_blank">Packed Bubble Split</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/parallel-coordinates/index.html" target="_blank">Parallel Coordinates</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/parallel-coordinates-polar/index.html" target="_blank">Parallel Coordinates Polar</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/pareto/index.html" target="_blank">Pareto</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/parliament-chart/index.html" target="_blank">Parliament Chart</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/pictorial/index.html" target="_blank">Pictorial</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/pictorial-stackshadow/index.html" target="_blank">Pictorial Stackshadow</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/pie-chart/index.html" target="_blank">Pie Chart</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/pie-custom-entrance-animation/index.html" target="_blank">Pie Custom Entrance Animation</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/pie-drilldown/index.html" target="_blank">Pie Drilldown</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/pie-gradient/index.html" target="_blank">Pie Gradient</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/pie-legend/index.html" target="_blank">Pie Legend</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/pie-monochrome/index.html" target="_blank">Pie Monochrome</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/pie-semi-circle/index.html" target="_blank">Pie Semi Circle</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/plotline-context/index.html" target="_blank">Plotline Context</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/polar/index.html" target="_blank">Polar</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/polar-advanced/index.html" target="_blank">Polar Advanced</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/polar-radial-bar/index.html" target="_blank">Polar Radial Bar</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/polar-spider/index.html" target="_blank">Polar Spider</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/polar-wind-rose/index.html" target="_blank">Polar Wind Rose</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/polygon/index.html" target="_blank">Polygon</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/pyramid/index.html" target="_blank">Pyramid</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/pyramid3d/index.html" target="_blank">Pyramid3D</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/renderer/index.html" target="_blank">Renderer</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/responsive/index.html" target="_blank">Responsive</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/sankey-diagram/index.html" target="_blank">Sankey Diagram</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/scatter/index.html" target="_blank">Scatter</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/scatter-boost/index.html" target="_blank">Scatter Boost</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/scatter-jitter/index.html" target="_blank">Scatter Jitter</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/sonification-music/index.html" target="_blank">Sonification Music</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/sonification-navigation/index.html" target="_blank">Sonification Navigation</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/sonified-function/index.html" target="_blank">Sonified Function</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/sparkline/index.html" target="_blank">Sparkline</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/spline-inverted/index.html" target="_blank">Spline Inverted</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/spline-irregular-time/index.html" target="_blank">Spline Irregular Time</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/spline-plot-bands/index.html" target="_blank">Spline Plot Bands</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/spline-plotlines/index.html" target="_blank">Spline Plotlines</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/spline-symbols/index.html" target="_blank">Spline Symbols</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/stellar-chart/index.html" target="_blank">Stellar Chart</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/streamgraph/index.html" target="_blank">Streamgraph</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/styled-mode-column/index.html" target="_blank">Styled Mode Column</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/styled-mode-pie/index.html" target="_blank">Styled Mode Pie</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/sunburst/index.html" target="_blank">Sunburst</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/synchronized-charts/index.html" target="_blank">Synchronized Charts</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/timeline/index.html" target="_blank">Timeline</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/treegraph-boxes/index.html" target="_blank">Treegraph Boxes</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/treegraph-chart/index.html" target="_blank">Treegraph Chart</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/treegraph-inverted/index.html" target="_blank">Treegraph Inverted</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/treemap-coloraxis/index.html" target="_blank">Treemap Coloraxis</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/treemap-large-dataset/index.html" target="_blank">Treemap Large Dataset</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/treemap-with-levels/index.html" target="_blank">Treemap With Levels</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/variable-radius-pie/index.html" target="_blank">Variable Radius Pie</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/variwid/index.html" target="_blank">Variwid</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/vector-plot/index.html" target="_blank">Vector Plot</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/venn-diagram/index.html" target="_blank">Venn Diagram</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/vertical-sankey/index.html" target="_blank">Vertical Sankey</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/waterfall/index.html" target="_blank">Waterfall</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/windbarb-series/index.html" target="_blank">Windbarb Series</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/wordcloud/index.html" target="_blank">Wordcloud</a></li>
+    <li><a href="lib-charts/highcharts-core/examples/x-range/index.html" target="_blank">X Range</a></li>
+  </ul>
+  <h2>Highcharts Stock</h2>
+  <ul>
+    <li><a href="lib-charts/highcharts-stock/examples/all-indicators/index.html" target="_blank">All Indicators</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/area/index.html" target="_blank">Area</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/arearange/index.html" target="_blank">Arearange</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/areaspline/index.html" target="_blank">Areaspline</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/areasplinerange/index.html" target="_blank">Areasplinerange</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/basic-line/index.html" target="_blank">Basic Line</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/black-and-white/index.html" target="_blank">Black And White</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/candlestick/index.html" target="_blank">Candlestick</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/candlestick-and-volume/index.html" target="_blank">Candlestick And Volume</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/column/index.html" target="_blank">Column</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/columnrange/index.html" target="_blank">Columnrange</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/compare/index.html" target="_blank">Compare</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/cumulative-sum/index.html" target="_blank">Cumulative Sum</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/dark-candlestick-and-volume/index.html" target="_blank">Dark Candlestick And Volume</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/dark-theme/index.html" target="_blank">Dark Theme</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/data-grouping/index.html" target="_blank">Data Grouping</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/depth-chart/index.html" target="_blank">Depth Chart</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/drag-on-axis/index.html" target="_blank">Drag On Axis</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/dynamic-update/index.html" target="_blank">Dynamic Update</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/flags-general/index.html" target="_blank">Flags General</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/flags-placement/index.html" target="_blank">Flags Placement</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/flags-shapes/index.html" target="_blank">Flags Shapes</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/heikinashi/index.html" target="_blank">Heikinashi</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/hlc/index.html" target="_blank">Hlc</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/hollow-candlestick/index.html" target="_blank">Hollow Candlestick</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/intraday-area/index.html" target="_blank">Intraday Area</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/intraday-breaks/index.html" target="_blank">Intraday Breaks</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/intraday-candlestick/index.html" target="_blank">Intraday Candlestick</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/inverted-navigator/index.html" target="_blank">Inverted Navigator</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/lazy-loading/index.html" target="_blank">Lazy Loading</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/live-candlestick/index.html" target="_blank">Live Candlestick</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/macd-pivot-points/index.html" target="_blank">Macd Pivot Points</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/markers-only/index.html" target="_blank">Markers Only</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/maskinside-false/index.html" target="_blank">Maskinside False</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/neon-line-chart/index.html" target="_blank">Neon Line Chart</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/ohlc/index.html" target="_blank">Ohlc</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/orderbook-chart/index.html" target="_blank">Orderbook Chart</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/pointandfigure/index.html" target="_blank">Pointandfigure</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/rangeselector-datagrouping/index.html" target="_blank">Rangeselector Datagrouping</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/relative-rotation-graph/index.html" target="_blank">Relative Rotation Graph</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/renko/index.html" target="_blank">Renko</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/responsive/index.html" target="_blank">Responsive</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/sma-volume-by-price/index.html" target="_blank">Sma Volume By Price</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/soundscape/index.html" target="_blank">Soundscape</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/spline/index.html" target="_blank">Spline</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/standalone-navigator/index.html" target="_blank">Standalone Navigator</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/step-line/index.html" target="_blank">Step Line</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/stock-css-design/index.html" target="_blank">Stock Css Design</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/stock-tools-custom-gui/index.html" target="_blank">Stock Tools Custom Gui</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/stock-tools-gui/index.html" target="_blank">Stock Tools Gui</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/styled-scrollbar/index.html" target="_blank">Styled Scrollbar</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/technical-analysis/index.html" target="_blank">Technical Analysis</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/two-standalone-navigators/index.html" target="_blank">Two Standalone Navigators</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/yaxis-plotbands/index.html" target="_blank">Yaxis Plotbands</a></li>
+    <li><a href="lib-charts/highcharts-stock/examples/yaxis-plotlines/index.html" target="_blank">Yaxis Plotlines</a></li>
+  </ul>
+  <h2>Highcharts Maps</h2>
+  <ul>
+    <li><a href="lib-charts/highcharts-maps/examples/all-areas-as-null/index.html" target="_blank">All Areas As Null</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/all-maps/index.html" target="_blank">All Maps</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/animated-mapline/index.html" target="_blank">Animated Mapline</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/audio-map/index.html" target="_blank">Audio Map</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/basic-map/index.html" target="_blank">Basic Map</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/category-map/index.html" target="_blank">Category Map</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/cinema-seat-plan/index.html" target="_blank">Cinema Seat Plan</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/circlemap-africa/index.html" target="_blank">Circlemap Africa</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/color-axis/index.html" target="_blank">Color Axis</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/data-class-ranges/index.html" target="_blank">Data Class Ranges</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/data-class-two-ranges/index.html" target="_blank">Data Class Two Ranges</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/diamondmap/index.html" target="_blank">Diamondmap</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/distribution/index.html" target="_blank">Distribution</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/doubleclickzoomto/index.html" target="_blank">Doubleclickzoomto</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/eu-capitals-temp/index.html" target="_blank">Eu Capitals Temp</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/flight-routes/index.html" target="_blank">Flight Routes</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/flowmap/index.html" target="_blank">Flowmap</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/flowmap-migration/index.html" target="_blank">Flowmap Migration</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/flowmap-world-cup/index.html" target="_blank">Flowmap World Cup</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/geoheatmap-earth-statistics/index.html" target="_blank">Geoheatmap Earth Statistics</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/geoheatmap-europe/index.html" target="_blank">Geoheatmap Europe</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/geoheatmap-orthographic/index.html" target="_blank">Geoheatmap Orthographic</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/geojson/index.html" target="_blank">Geojson</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/heatmap/index.html" target="_blank">Heatmap</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/honeycomb-usa/index.html" target="_blank">Honeycomb Usa</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/latlon-advanced/index.html" target="_blank">Latlon Advanced</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/lightning/index.html" target="_blank">Lightning</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/locator-map/index.html" target="_blank">Locator Map</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/map-bubble/index.html" target="_blank">Map Bubble</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/map-drilldown/index.html" target="_blank">Map Drilldown</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/map-drilldown-preloaded/index.html" target="_blank">Map Drilldown Preloaded</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/map-pies/index.html" target="_blank">Map Pies</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/map-trajectory/index.html" target="_blank">Map Trajectory</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/mapline-mappoint/index.html" target="_blank">Mapline Mappoint</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/mappoint-datalabels-mapmarker/index.html" target="_blank">Mappoint Datalabels Mapmarker</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/mappoint-latlon/index.html" target="_blank">Mappoint Latlon</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/mappoint-mapmarker/index.html" target="_blank">Mappoint Mapmarker</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/marker-clusters/index.html" target="_blank">Marker Clusters</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/pattern-fill-map/index.html" target="_blank">Pattern Fill Map</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/projection-explorer/index.html" target="_blank">Projection Explorer</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/rich-info/index.html" target="_blank">Rich Info</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/spider-map/index.html" target="_blank">Spider Map</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/tooltip/index.html" target="_blank">Tooltip</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/topojson-projection/index.html" target="_blank">Topojson Projection</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/twm-oslo-attractions/index.html" target="_blank">Twm Oslo Attractions</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/twm-providers/index.html" target="_blank">Twm Providers</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/us-counties/index.html" target="_blank">Us Counties</a></li>
+    <li><a href="lib-charts/highcharts-maps/examples/us-data-labels/index.html" target="_blank">Us Data Labels</a></li>
+  </ul>
+  <h2>Highcharts Gantt</h2>
+  <ul>
+    <li><a href="lib-charts/highcharts-gantt/examples/custom-labels/index.html" target="_blank">Custom Labels</a></li>
+    <li><a href="lib-charts/highcharts-gantt/examples/download-pdf/index.html" target="_blank">Download Pdf</a></li>
+    <li><a href="lib-charts/highcharts-gantt/examples/interactive-gantt/index.html" target="_blank">Interactive Gantt</a></li>
+    <li><a href="lib-charts/highcharts-gantt/examples/inverted/index.html" target="_blank">Inverted</a></li>
+    <li><a href="lib-charts/highcharts-gantt/examples/left-axis-table/index.html" target="_blank">Left Axis Table</a></li>
+    <li><a href="lib-charts/highcharts-gantt/examples/logistics/index.html" target="_blank">Logistics</a></li>
+    <li><a href="lib-charts/highcharts-gantt/examples/progress-indicator/index.html" target="_blank">Progress Indicator</a></li>
+    <li><a href="lib-charts/highcharts-gantt/examples/project-management/index.html" target="_blank">Project Management</a></li>
+    <li><a href="lib-charts/highcharts-gantt/examples/resource-management/index.html" target="_blank">Resource Management</a></li>
+    <li><a href="lib-charts/highcharts-gantt/examples/styled-mode/index.html" target="_blank">Styled Mode</a></li>
+    <li><a href="lib-charts/highcharts-gantt/examples/subtasks/index.html" target="_blank">Subtasks</a></li>
+    <li><a href="lib-charts/highcharts-gantt/examples/treegrid-columns/index.html" target="_blank">Treegrid Columns</a></li>
+    <li><a href="lib-charts/highcharts-gantt/examples/with-navigation/index.html" target="_blank">With Navigation</a></li>
+  </ul>
+  <h2>Highcharts Dashboards</h2>
+  <ul>
+    <li><a href="lib-charts/highcharts-dashboards/examples/accounting/index.html" target="_blank">Accounting</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/axes-sync/index.html" target="_blank">Axes Sync</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/climate/index.html" target="_blank">Climate</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/cloud-monitoring/index.html" target="_blank">Cloud Monitoring</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/crossfilter/index.html" target="_blank">Crossfilter</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/election/index.html" target="_blank">Election</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/grid-mathmodifier/index.html" target="_blank">Grid Mathmodifier</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/grid-sync/index.html" target="_blank">Grid Sync</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/light-dark-theme/index.html" target="_blank">Light Dark Theme</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/live-weather/index.html" target="_blank">Live Weather</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/minimal/index.html" target="_blank">Minimal</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/minimal-html/index.html" target="_blank">Minimal Html</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/mqtt/index.html" target="_blank">Mqtt</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/personal-finance/index.html" target="_blank">Personal Finance</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/personal-portfolio/index.html" target="_blank">Personal Portfolio</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/project-management/index.html" target="_blank">Project Management</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/sync/index.html" target="_blank">Sync</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/sync-cursor/index.html" target="_blank">Sync Cursor</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/sync-extremes/index.html" target="_blank">Sync Extremes</a></li>
+    <li><a href="lib-charts/highcharts-dashboards/examples/vertical/index.html" target="_blank">Vertical</a></li>
+  </ul>
+</body>
+</html>
