@@ -1,0 +1,72 @@
+[
+  {
+    "id": "0.0",
+    "parent": "",
+    "name": "Minerva Foods / ONEPEC / USP",
+    "description": "Centro da Mandala",
+    "_coment": "Nível 0"
+  },
+  {
+    "id": "1.1",
+    "parent": "0.0",
+    "name": "Tecnologia de Produção Animal",
+    "description": "Eixo de Pesquisa: Tecnologia de Produção Animal",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 1 - Eixo"
+  },
+  {
+    "id": "1.2",
+    "parent": "0.0",
+    "name": "Tecnologia da Indústria",
+    "description": "Eixo de Pesquisa: Tecnologia da Indústria",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 1 - Eixo"
+  },
+  {
+    "id": "1.3",
+    "parent": "0.0",
+    "name": "Bioenergia e Co-produtos",
+    "description": "Eixo de Pesquisa: Bioenergia e Co-produtos",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 1 - Eixo"
+  },
+  {
+    "id": "1.4",
+    "parent": "0.0",
+    "name": "Segurança e Qualidade da Carne",
+    "description": "Eixo de Pesquisa: Segurança e Qualidade da Carne",
+    "value": 1,
+    "color": "#d32f2f",
+    "_coment": "Nível 1 - Eixo"
+  },
+  {
+    "id": "1.5",
+    "parent": "0.0",
+    "name": "Sustentabilidade e Valor da Carne",
+    "description": "Eixo de Pesquisa: Sustentabilidade e Valor da Carne",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 1 - Eixo"
+  },
+  {
+    "id": "1.6",
+    "parent": "0.0",
+    "name": "Saúde e Nutrição Humana",
+    "description": "Eixo de Pesquisa: Saúde e Nutrição Humana",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 1 - Eixo"
+  },
+  {
+    "id": "1.7",
+    "parent": "0.0",
+    "name": "Inteligência Artificial e Transformação Digital",
+    "description": "Eixo de Pesquisa: Inteligência Artificial e Transformação Digital",
+    "value": 1,
+    "color": "#0288d1",
+    "_coment": "Nível 1 - Eixo"
+  }
+]

@@ -1,122 +1,102 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Highcharts Example</title>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CPA - Mandala Sunburst</title>
 
-		<style type="text/css">
-*{margin: 0; padding: 0;}
-.highcharts-figure,
-.highcharts-data-table table {
-    min-width: 320px;
-    max-width: 800px;
-    margin: 1em auto;
-}
+  <style>
+    * { margin: 0; padding: 0; }
+    .highcharts-figure {
+      min-width: 320px;
+      max-width: 1000px;
+      margin: 1em auto;
+    }
+    .highcharts-description {
+      margin: 0.3rem 10px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #444;
+    }
+    header {
+      width: 100%;
+      background-color: #f5f5f7;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .header-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    }
+    .header-title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #1d1d1f;
+    }
+    .back-link {
+      font-size: 0.95rem;
+      color: #0071e3;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .back-link:hover {
+      color: #005bb5;
+    }
 
-.highcharts-data-table table {
-    font-family: Verdana, sans-serif;
-    border-collapse: collapse;
-    border: 1px solid #ebebeb;
-    margin: 10px auto;
-    text-align: center;
-    width: 100%;
-    max-width: 500px;
-}
+    .eixo-transversal {
+      background-color: #eef3fc;
+      border-left: 6px solid #1d4ed8;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem auto 2rem;
+      font-family: "Segoe UI", sans-serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: #1f2937;
+      max-width: 800px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
 
-.highcharts-data-table caption {
-    padding: 1em 0;
-    font-size: 1.2em;
-    color: #555;
-}
+    .eixo-transversal::before {
+      content: "🧪";
+      font-size: 1.3rem;
+    }
 
-.highcharts-data-table th {
-    font-weight: 600;
-    padding: 0.5em;
-}
+    @media (max-width: 600px) {
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      .header-title {
+        font-size: 1rem;
+      }
+      .back-link {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
 
-.highcharts-data-table td,
-.highcharts-data-table th,
-.highcharts-data-table caption {
-    padding: 0.5em;
-}
+<header>
+  <div class="header-container">
+    <span class="header-title">CPA – Centro de Pesquisa Aplicada</span>
+    <a href="./index.html" class="back-link">← Voltar</a>
+  </div>
+</header>
 
-.highcharts-data-table thead tr,
-.highcharts-data-table tr:nth-child(even) {
-    background: #f8f8f8;
-}
-
-.highcharts-data-table tr:hover {
-    background: #f1f7ff;
-}
-
-.highcharts-description {
-    margin: 0.3rem 10px;
-}
-header {
-  width: 100%;
-  background-color: #f5f5f7;
-  border-bottom: 1px solid #ddd;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-.header-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-}
-
-.header-title {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #1d1d1f;
-}
-
-.back-link {
-  font-size: 0.95rem;
-  color: #0071e3;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.back-link:hover {
-  color: #005bb5;
-}
-
-@media (max-width: 600px) {
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .header-title {
-    font-size: 1rem;
-  }
-
-  .back-link {
-    font-size: 0.9rem;
-  }
-}
-
-
-
-		</style>
-	</head>
-	<body>
-        <header>
-            <div class="header-container">
-                <span class="header-title">CPA – Centro de Pesquisa Aplicada</span>
-                <a href="./index.html" class="back-link">← Voltar</a>
-            </div>
-        </header>
 <script src="./src-mandala/code/highcharts.js"></script>
 <script src="./src-mandala/code/modules/sunburst.js"></script>
 <script src="./src-mandala/code/modules/exporting.js"></script>
@@ -124,26 +104,25 @@ header {
 <script src="./src-mandala/code/modules/accessibility.js"></script>
 
 <figure class="highcharts-figure">
-    <div id="container"></div>
-    <p class="highcharts-description" style="text-align: center;">
-        Testando legenda
-        Sunburst charts are used to visualize hierarchical data in a
-        circular shape. The inner elements are parent nodes, with
-        child nodes distributed on the outer rings. Click on a parent
-        node to drill down and inspect the tree in more detail.
-    </p>
+  <div id="container"></div>
+  <p class="highcharts-description">
+    Este gráfico apresenta os eixos, pacotes de trabalho e projetos do CPA organizados hierarquicamente. <br>
+    Clique nos nós para expandir e navegar.
+  </p>
 </figure>
+
+<div class="eixo-transversal">
+  <strong>Eixo Transversal</strong> Apoio dos laboratórios: qualidade, energia nuclear na agricultura, química e bioquímica de alimentos
+</div>
+
 <script>
-// fetch('./dados-mandala.json')
-// fetch('./dados-mandala-cpa-onepec.json')
-fetch('./dados-mandala-cpa-onepec-reestruturado.json')
+fetch('./sunburst_cpa_completo_final.json')
   .then(response => response.json())
   .then(data => {
     Highcharts.chart('container', {
       chart: { height: '100%' },
-      colors: ['#ffffff01'].concat(Highcharts.getOptions().colors),
-      title: { text: 'Titulo da Mandala Aqui Teste' },
-      subtitle: { text: 'Fonte: Wikipedia' },
+      title: { text: 'CPA - Centro de Pesquisa Aplicada - Minerva Foods e USP' },
+      subtitle: { text: 'Fonte: Elaborado pelos autores' },
       series: [{
         type: 'sunburst',
         data: data,
@@ -154,38 +133,64 @@ fetch('./dados-mandala-cpa-onepec-reestruturado.json')
         dataLabels: {
           useHTML: true,
           formatter: function () {
-            // Centraliza o conteúdo com quebra de linha estilfizada
             if (this.point.id === '0.0') {
               return `
                 <div style="text-align:center; line-height:1.3;">
-                  <div style="font-size: 13px;">Minerva Foods</div>
-                  <div style="font-size: 20px; font-weight: bold;">ONEPEC</div>
-                  <div style="font-size: 13px;">USP</div>
+                  <div style="font-size: 15px;">Minerva Foods</div>
+                  <div style="font-size: 22px; font-weight: bold;">CPA</div>
+                  <div style="font-size: 15px;">USP</div>
                 </div>
               `;
-             }
-            return this.point.name;
+            }
+            const name = this.point.name || '';
+            const maxLen = 25;
+            const parts = name.match(new RegExp('.{1,' + maxLen + '}', 'g')) || [];
+            return `
+              <div style="text-align: center; font-size: 10px; line-height: 1.2;">
+                ${parts.map(line => `<div>${line}</div>`).join('')}
+              </div>
+            `;
+          }
+        },
+        tooltip: {
+          useHTML: true,
+          outside: true,
+          style: {
+            zIndex: 2147483647,
+            fontSize: '13px'
           },
-          filter: { property: 'innerArcLength', operator: '>', value: 1 }
+          backgroundColor: 'rgba(255, 255, 255, 0.95)',
+          borderColor: '#666',
+          borderRadius: 8,
+          borderWidth: 1,
+          shadow: true,
+          headerFormat: '',
+          pointFormat: `
+            <div style="max-width: 300px;">
+              <div style="font-weight: bold; font-size: 14px; margin-bottom: 4px;">{point.name}</div><br/>
+              <div style="margin-bottom: 4px;">{point.description}</div><br/>
+              <div><b>Pesquisador Principal:</b> {point.pesquisadorPrincipal}</div><br/>
+              <div><b>Responsáveis Minerva:</b> {point.responsavelMinerva}</div>
+            </div>
+          `
         },
         levels: [
           {
-            level: 1,
-            levelIsConstant: false,
+            level: 0,
+            levelIsConstant: true,
             dataLabels: {
-              filter: { property: 'outerArcLength', operator: '>', value: 1 }
+              allowOverlap: true
             }
           },
-          { level: 2, colorByPoint: true },
-          { level: 3, colorVariation: { key: 'brightness', to: -0.5 } },
-          { level: 4, colorVariation: { key: 'brightness', to: 0.5 } }
+          { level: 1, levelIsConstant: false },
+          { level: 2, colorByPoint: false },
+          { level: 3, colorByPoint: false }
         ]
-      }],
-      tooltip: { headerFormat: '' }
+      }]
     });
   })
   .catch(error => console.error('Erro ao carregar JSON:', error));
 </script>
 
-	</body>
+</body>
 </html>

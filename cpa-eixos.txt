@@ -1,0 +1,164 @@
+Eixo 1: Tecnologia da Produção Animal
+| ID    | Work Package Original                                                                                  | Acrônimo | Significado Explicativo |
+| 1.1   | Estratégias de criação direcionadas (do desmame ao abate)                                              | ECCDA    | *Estratégias de Criação: Desmame ao Abate*  |
+| 1.1.1 | Impactos da suplementação estratégica na estação seca                                                  | SUPSEC   | *SUPlementação na Estação Seca*
+| 1.1.2 | Identificação de indicadores biológicos de desempenho                                                  | INDBIO   | *INDicadores BIOlógicos de desempenho*
+| 1.1.3 | Programação nutricional de características de carcaça                                                  | SUPCAR   | *SUPlementação e CARcaça*                            
+| 1.2   | Formulações inteligentes de dietas para confinamento                                                   | FIDC     | *Formulações Inteligentes para Dietas de Confinamento* |
+| 1.2.1 | Estratégias direcionadas de processamento de grãos                                                     | PROCGR   | *PROCESSamento de GRãos*                               
+| 1.2.2 | Uso eficiente de coprodutos agroindustriais                                                            | COPNUT   | *COProdutos na NUTrição*                               
+| 1.2.3 | Uso estratégico de fontes e níveis de fibra                                                            | FIBRUM   | *FIBRa e RUMem*                                        
+| 1.2.4 | Interações nutricionais em dietas de terminação                                                        | INTERD   | *INTERações em Dietas*                                 
+| 1.3   | Aditivos para confinamento: aumentando os ganhos e reduzindo as emissões                               | ADICONF  | *ADItivos no CONFinamento*                             
+| 1.3.1 | Impacto do bromofórmio                                                                                 | BROMO    | *BROMOfórmio e desempenho*                             
+| 1.3.2 | Ingredientes estratégicos redutores de metano                                                          | REDMET   | *REDução de METano*                                    
+| 1.3.3 | Efeitos sinérgicos de aditivos com modos de ação contrastantes                                         | SYNACT   | *SYNergia de Aditivos Contrastes*                      
+| 1.3.4 | Microbioma ruminal e biomarcadores                                                                     | MICBIO   | *MICrobioma e BIOmarcadores*                           
+| 1.4   | Manejo de pastagens ecologicamente correto                                                             | MANPAS   | *MANejo de PAStagens*                                  
+| 1.4.1 | Avaliação de gramíneas e leguminosas para pastagens multiespécies                                      | GRAMLEG  | *GRAMíneas e LEGuminosas*                              
+| 1.4.2 | Desenvolvimento de práticas de manejo para pastagens multiespécies                                     | DEVMP    | *DEsenvolvimento de Manejo de Pastagem*                
+| 1.4.3 | Impacto na saúde do solo                                                                               | SAUSOLO  | *SAÚde do SOLO*                                        
+| 1.4.4 | Emissões de gases de efeito estufa em pastagens multiespécies                                          | GEEPAS   | *GEE em PAStagens*                                     
+| 1.5   | Aumento da eficiência reprodutiva em novilhas Bos indicus                                              | REPBOS   | *REProdução em BOS indicus*                            
+| 1.5.1 | Vias hormonais e metabólicas                                                                           | HORREP   | *HORmonais e REProdução*                               
+| 1.5.2 | Tratamentos dietéticos e idade ao primeiro parto                                                       | DIETREP  | *DIETa e REProdução*                                   
+| 1.5.3 | Protocolos hormonais para redução da idade ao primeiro parto                                           | PROTREP  | *PROTocolo REProdutivo*                                
+| 1.5.4 | Marcadores genéticos e maturidade sexual precoce                                                       | GENMAT   | *GENética e MATuridade*                                
+| 1.6   | Uso do rastreamento isotópico para verificar a origem da carne bovina e identificar animais eficientes | ISOEFIC  | *ISOtopos para EFICIência*                             
+| 1.6.1 | Perfis isotópicos dos componentes da dieta                                                             | ISOPERF  | *ISOtopos e PERFis dietéticos*                         
+| 1.6.2 | Banco de dados de perfis isotópicos e regiões                                                          | ISODATA  | *ISOtopos e BANCo de dados*                            
+| 1.6.3 | Isótopos para identificar animais eficientes                                                           | ISOID    | *ISOtopos e IDentificação animal*                      
+
+Eixo 2: Tecnologia da Indústria
+| ID    | Work Package Original                                                                | Acrônimo sugerido | Significado                                |
+| ----- | ------------------------------------------------------------------------------------ | ----------------- | ------------------------------------------ |
+| 2.1   | Tecnologias Automatizadas de Detecção e Classificação                                | TECDET            | *TECnologias de DETecção*                  |
+| 2.1.1 | Desenvolvimento de sensores e sistemas para detectar atributos de qualidade da carne | SENCAR            | *SENsores para CARne*                      |
+| 2.1.2 | Equipamentos para avaliação de carcaças para diferentes mercados                     | AVALCA            | *AVALiação de CArcaças*                    |
+| 2.1.3 | Sistemas de inspeção em linha para impurezas                                         | INSIMP            | *INSpeção de IMPurezas*                    |
+| 2.1.4 | Validação de equipamentos para eficiência operacional e rendimento                   | VALEFI            | *VALidação da EFIciência*                  |
+| 2.2   | Estratégias de Segurança Microbiológica e Descontaminação                            | MICSEG            | *MICrobiologia e SEGurança*                |
+| 2.2.1 | Sistemas automatizados para detecção de patógenos                                    | DETPAT            | *DETecção de PATógenos*                    |
+| 2.2.2 | Métodos como UV, luz pulsada e ácidos orgânicos para redução microbiana              | METRED            | *METodos de REDução microbiana*            |
+| 2.2.3 | Mapeamento de bactérias resistentes a antimicrobianos                                | MAPRAM            | *MAPeamento de Resistência AntiMicrobiana* |
+| 2.3   | Processos Pós-Abate e Qualidade da Carne                                             | POSCAR            | *POSt abate e CARne*                       |
+| 2.3.1 | Investigação da carne DFD                                                            | CARDFD            | *CARne tipo DFD*                           |
+| 2.3.2 | Técnicas de resfriamento para melhor textura                                         | RESFIB            | *RESFriamento e FIbras musculares*         |
+| 2.3.3 | Protocolos de maturação personalizados                                               | MATCAR            | *MATUração de CARne*                     |
+| 2.3.4 | Efeitos do congelamento no processamento                                             | CONGEL            | *CONGELamento e qualidade*                 |
+| 2.4   | Inovação de produtos e soluções de embalagens sustentáveis                           | EMBSUS            | *EMBalagens SUStentáveis*                  |
+| 2.4.1 | Desenvolvimento de novos cortes                                                      | CORTES            | *CORTES inovadores*                        |
+| 2.4.2 | Sistemas de embalagem recicláveis                                                    | EMBREC            | *EMBalagens RECicláveis*                   |
+| 2.4.3 | Tecnologias de preservação para carne embalada                                       | PRECAR            | *PREservação de CARne*                     |
+| 2.4.4 | Embalagens ativas e inteligentes com foco antioxidante                               | EMBATI            | *EMBalagens ATIvas*                        |
+
+Eixo 3: Bioenergia e Co-produtos
+| ID    | Work Package Original                                                                | Acrônimo | Significado Explicativo                      |
+| ----- | ------------------------------------------------------------------------------------ | -------- | -------------------------------------------- |
+| 3.1   | Produção avançada de biocombustíveis a partir de gordura bovina                      | BIOGORD  | *BIOcombustível de GORDura bovina*           |
+| 3.1.1 | Ampliação industrial da produção de SAF a partir de sebo bovino                      | SAFGORD  | *SAF de GORDura bovina*                      |
+| 3.1.2 | Rotas HEFA com catalisadores locais                                                  | HEFLOC   | *HEFA com catalisadores LOCais*              |
+| 3.1.3 | Modelos modulares descentralizados de produção de biocombustíveis                    | MODBIO   | *MODelos de BIOcombustível*                  |
+| 3.1.4 | Biodiesel 100% verde com biometanol celulósico                                       | VERTBIO  | *VERde + Transesterificação BIO*             |
+| 3.1.5 | Avaliação do ciclo de vida de combustíveis sustentáveis                              | CICLOBIO | *CICLO de vida BIOcombustível*               |
+| 3.2   | Valorização Energética e Agronômica do Conteúdo Ruminal                              | VECORU   | *Valorização Energética do CONteúdo RUminal* |
+| 3.2.1 | Implementação de biodigestores modulares em unidades de abate                        | BIODIG   | *BIOdigestores em abate*                     |
+| 3.2.2 | Modelagem matemática para dimensionamento energético                                 | MODENER  | *MODELagem de ENERgia*                       |
+| 3.2.3 | Produção de biofertilizantes orgânicos de alta eficiência                            | BIOFERT  | *BIOFERTilizantes de alta eficiência*        |
+| 3.2.4 | Sistemas integrados de energia e biofertilizantes                                    | SINTEBIO | *SISTEmas integrados BIO*                    |
+| 3.2.5 | Logística e viabilidade técnico-econômica do conteúdo ruminal                        | LOGRUM   | *LOGística do RUminal*                       |
+| 3.3   | Desenvolvimento de Bioprodutos a partir do Craqueamento de Gorduras e Proteínas      | CRABIO   | *CRAqueamento para BIOprodutos*              |
+| 3.3.1 | Craqueamento térmico/catalítico de proteínas bovinas                                 | CRAPROT  | *CRAqueamento de PROTeínas*                  |
+| 3.3.2 | Biofilmes, hidrogéis e scaffolds regenerativos à base de colágeno e gelatina técnica | BIOCOL   | *BIOmateriais de COLágeno*                   |
+| 3.3.3 | Formulação de aditivos para rações a partir de materiais proteicos residuais         | ADIPROT  | *ADItivos de PROTeína residual*              |
+| 3.3.4 | Extração seletiva e funcionalização de colágeno para cosméticos e biomateriais       | COLFUN   | *COLágeno FUNCionalizado*                    |
+| 3.4   | Inovação Tecnológica e Engenharia de Equipamentos para Biorrefinarias                | INOVBIO  | *INOVação em BIOrefinarias*                  |
+| 3.4.1 | Desenvolvimento de equipamentos nacionais                                            | EQUIBIO  | *EQUIPamentos para BIOrefinaria*             |
+| 3.4.2 | Ambientes virtuais para treinamento de operadores e simulação de processos           | SIMUBIO  | *SIMUlação em BIOrefinarias*                 |
+| 3.4.3 | Controle avançado de processos e automação para bioenergia                           | CONTAUT  | *CONTrole AUTomático*                        |
+| 3.4.4 | Biorrefinarias piloto multiuso integradas com unidades de proteína animal            | PILBIO   | *Planta PILoto de BIOrefinaria*              |
+| 3.5   | Inteligência Regulatória e Governança para Biorrefinarias                            | REGBIO   | *REGulação em BIOrefinarias*                 |
+| 3.5.1 | Mapeamento comparativo da legislação aplicável                                       | LEGBIO   | *LEGislação em BIOenergia*                   |
+| 3.5.2 | Plataforma de inteligência regulatória                                               | PLATREG  | *PLATaforma REGulatória*                     |
+| 3.5.3 | Estudos regulatórios para novos bioprodutos                                          | ESTREG   | *ESTudos REGulatórios*                       |
+| 3.5.4 | Propostas de políticas públicas e instrumentos legais                                | POLIBIO  | *POLÍTicas para BIOenergia*                  |
+| 3.5.5 | Capacitação em certificação e governança regulatória                                 | CAPREG   | *CAPacitação REGulatória*                    |
+
+Eixo 4: Segurança e Qualidade da Carne 
+| ID    | Work Package Original                                                          | Acrônimo | Significado Explicativo                   |
+| ----- | ------------------------------------------------------------------------------ | -------- | ----------------------------------------- |
+| 4.1   | Aplicação de técnicas para avaliação da qualidade, processos e rastreabilidade | QUAERA   | *QUALidade, Rastreabilidade e Avaliação*  |
+| 4.1.1 | Ressonância Magnética Nuclear na rastreabilidade e qualidade                   | RMNRA    | *Ressonância Magnética e Rastreabilidade* |
+| 4.2   | Segurança Alimentar e Qualidade de Produtos                                    | SEGALI   | *SEGurança ALImentar*                     |
+| 4.2.1 | Monitoramento de contaminantes                                                 | CONTAM   | *CONTAMinantes na carne*                  |
+| 4.3   | Desenvolvimento de sensores de baixo custo para temperatura na cadeia cárnea   | SENCHA   | *SENsores para CAdeia de carne*           |
+| 4.3.1 | Indicador térmico “SmartSeal”                                                  | SMARTS   | *SMARTSeal de temperatura*                |
+| 4.4   | Desenvolvimento de embalagens biodegradáveis e comestíveis                     | EMBBIO   | *EMBalagens BIOdegradáveis*               |
+| 4.4.1 | Filme biodegradável                                                            | FILBIO   | *FILme BIOdegradável*                     |
+| 4.4.2 | Aplicação e vida de prateleira                                                 | VIDFIL   | *VIDa útil com FILme*                     |
+| 4.4.3 | Aceitabilidade pelo consumidor                                                 | CONSUM   | *CONSUMidor e embalagens*                 |
+
+Eixo 5: Sustentabilidade e Valor da Carne
+| ID    | Work Package Original                                                | Acrônimo | Significado Explicativo          |
+| ----- | -------------------------------------------------------------------- | -------- | -------------------------------- |
+| 5.1   | Estratégias de agregação de valor à carne com compostos bioativos    | VALBIO   | *VALorização BIOativa da carne*  |
+| 5.1.1 | Metabólitos da carne                                                 | METCAR   | *METabólitos da CARne*           |
+| 5.1.2 | Bioinformática e metabolômica                                        | BIOMET   | *BIOinformática e METabolômica*  |
+| 5.1.3 | Suplementação com selênio                                            | SELSUP   | *SELênio e SUPlementação*        |
+| 5.1.4 | Biofortificação com selênio                                          | SELFOR   | *SELênio e FORtificação*         |
+| 5.1.5 | Perfil lipídico e enzimas antioxidantes                              | LIPANT   | *LIPídios e ANTioxidantes*       |
+| 5.2   | Eficiência hídrica e ambiental com foco ESG                          | HIDESG   | *HIDrica e ESG*                  |
+| 5.2.1 | Eficiência hídrica da carne                                          | HIDCARN  | *HIDrica e CARNe*                |
+| 5.3   | Eficiência econômica e internacionalização                           | EFIECO   | *EFIcência ECOnômica*            |
+| 5.3.1 | Produção intensiva                                                   | INTENS   | *INTENSificação produtiva*       |
+| 5.3.2 | Demanda internacional e mudanças demográficas                        | DEMASI   | *DEmanda e ÁSIa*                 |
+| 5.3.3 | Desempenho econômico e financeiro                                    | DESECO   | *DESEmpenho ECOnômico*           |
+| 5.3.4 | ESG e finanças sustentáveis                                          | ESGFIN   | *ESG e FINanças*                 |
+| 5.4   | Valorização funcional da carne e coprodutos                          | VALFUN   | *VALorização FUNcional*          |
+| 5.4.1 | Predição de qualidade com espectroscopia e sensorial                 | PREDIQ   | *PREDIção de Qualidade*          |
+| 5.4.2 | Amaciamento com enzimas vegetais                                     | AMACEN   | *AMACiamento com ENzimas*        |
+| 5.4.3 | Géis cárneos funcionais                                              | GELFUN   | *GEL cárneo FUNCional*           |
+| 5.4.4 | Peptídeos bioativos de coprodutos                                    | PEPCOP   | *PEPtídeos de COProdutos*        |
+| 5.4.5 | Biotecnologia sustentável com bactérias láticas                      | BIOLAC   | *BIOTecnologia LÁCtica*          |
+| 5.5   | Uso de imagens para monitoramento de oferta e qualidade forrageira   | IMAFOR   | *IMAgens e FORragem*             |
+| 5.5.1 | Imagens para predição de abate                                       | PREABT   | *PREdição para ABaTe*            |
+| 5.5.2 | Indicadores ambientais e produtivos para planejamento fazendas e ESG | INDFEZG  | *INDicadores para Fazenda e ESG* |
+
+Eixo 6: Saúde e Nutrição Humana 
+| ID    | Work Package Original                                                              | Acrônimo | Significado Explicativo          |
+| ----- | ---------------------------------------------------------------------------------- | -------- | -------------------------------- |
+| 6.1   | Interação entre infecção, nutrição e imunidade                                     | INFNUT   | *INFecção, NUTrição e imunidade* |
+| 6.1.1 | Efeitos Agudos do Consumo de Carne com e sem Selênio                               | SELCAR   | *SELênio e CARne*                |
+| 6.1.2 | Suplementação de proteína bovina hidrolisada para HIV                              | PROHIV   | *PROteína bovina e HIV*          |
+| 6.2   | Nutrição esportiva - esportes de alto rendimento e estilo de vida                  | NUTESP   | *NUTrição ESPortiva*             |
+| 6.2.1 | Consumo de carne e suplementos em atletas                                          | CARSUP   | *CARne e SUPlementos*            |
+| 6.2.2 | Carne/CLA e inflamação em atletas                                                  | CLACAR   | *CLA e CARne*                    |
+| 6.3   | Dieta e estado nutricional                                                         | DIETNU   | *DIETA e NUtrição*               |
+| 6.3.1 | Suporte dietético na recuperação de pacientes com PCM                              | SUPPCM   | *SUPorte nutricional no PCM*     |
+| 6.3.2 | Carne bovina, microbiota e remodelação cardíaca pós-infarto                        | MICCAR   | *MICrobiota e CARdíaco*          |
+| 6.3.3 | Efeitos clínicos e hormonais da intervenção com produtos de carne bovina           | HORMCAR  | *HORMonal e CARne bovina*        |
+| 6.4   | Abordagens ômicas e efeito do consumo de carne                                     | OMICAR   | *ÔMICAs e CARne bovina*          |
+| 6.4.1 | Ensaios in vitro de digestão e absorção gastrintestinal                            | INVITRO  | *IN VITRO digestão e absorção*   |
+| 6.4.2 | Efeitos da carne bovina em modelos animais                                         | MODANI   | *MODelos ANImais*                |
+| 6.4.3 | Efeitos agudos da carne bovina no metabolismo pós-prandial                         | METAGUD  | *METAbolismo AGUDo*              |
+| 6.4.4 | Efeitos de diferentes tipos de carne no metabolismo pós-prandial                   | DIFCAR   | *DIFerentes tipos de CARne*      |
+| 6.4.5 | Efeitos de diferentes fontes de proteína dietética no metabolismo pós-prandial     | PROTFON  | *PROTeínas e FONTES*             |
+| 6.4.6 | Efeitos crônicos da carne bovina na saúde cardiometabólica e microbiota intestinal | CRONMET  | *CRÔNicos e METabolismo*         |
+
+Eixo 7: Inteligência Artificial e Transformação Digital
+   ID   | Work Package Original                               | Acrônimo sugerido | Significado                         |
+| 7.1   | Infraestrutura computacional                        | INFRAI            | *INFRAestrutura para IA*            |
+| 7.1.1 | Em definição                                        | Dev               | *em desenvolvimento*                |
+| 7.2   | Interoperabilidade de dados                         | INTERO            | *INTEROperabilidade de dados*       |
+| 7.2.1 | Em definição                                        | Dev               | *em desenvolvimento*                |
+| 7.3   | Otimização e Tomada de Decisão Multicritério        | OTDMUL            | *Otimização e Tomada Multicritério* |
+| 7.3.1 | Em definição                                        | Dev               | *em desenvolvimento*                |
+| 7.4   | Ciência de Dados, Probabilidade e Estatísticas      | CIDAPE            | *CIência de DAdos, Prob. e Estat.*  |
+| 7.4.1 | Em definição                                        | Dev               | *em desenvolvimento*                |
+| 7.5   | IA e Aprendizado de Máquina                         | IAAMAC            | *IA e Aprendizado de MÁQuina*       |
+| 7.5.1 | Em definição                                        | Dev               | *em desenvolvimento*                |
+| 7.6   | Comunicação (Relações Institucionais / Interação)   | COMIAI            | *COMunicação dos projetos de IA*    |
+         dos projetos de IA em conjunto com outras Coordenações 
+             para alinhamento continuado
+| 7.6.1 | Em definição                                        | Dev               | *em desenvolvimento*                |
+

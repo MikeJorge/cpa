@@ -1,0 +1,1301 @@
+[
+  {
+    "id": "0.0",
+    "parent": "",
+    "name": "Minerva Foods CPA USP",
+    "description": "Uma iniciativa da Minerva Foods e FAPESP",
+    "labelrank": 10,
+     "value": 1,
+    "color": "#4a1c40",
+    "_coment": "Nível 0"
+  },
+  {
+    "id": "1.1",
+    "parent": "0.0",
+    "name": "Tecnologia de Produção\nAnimal\n",
+    "description": "Eixo de Pesquisa",
+    "pesquisadorPrincipal": "Flávio Augusto Portela Santos",
+    "responsavelMinerva": "Mariane Crespolini dos Santos",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 1 - Eixo"
+  },
+  {
+    "id": "1.2",
+    "parent": "0.0",
+    "name": "Tecnologia da Indústria",
+    "description": "Eixo de Pesquisa: Tecnologia da Indústria",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 1 - Eixo"
+  },
+  {
+    "id": "1.3",
+    "parent": "0.0",
+    "name": "Bioenergia e Co-produtos",
+    "description": "Eixo de Pesquisa: Bioenergia e Co-produtos",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 1 - Eixo"
+  },
+  {
+    "id": "1.4",
+    "parent": "0.0",
+    "name": "Segurança e Qualidade da Carne",
+    "description": "Eixo de Pesquisa: Segurança e Qualidade da Carne",
+    "value": 1,
+    "color": "#d32f2f",
+    "_coment": "Nível 1 - Eixo"
+  },
+  {
+    "id": "1.5",
+    "parent": "0.0",
+    "name": "Sustentabilidade e Valor da Carne",
+    "description": "Eixo de Pesquisa: Sustentabilidade e Valor da Carne",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 1 - Eixo"
+  },
+  {
+    "id": "1.6",
+    "parent": "0.0",
+    "name": "Saúde e Nutrição Humana",
+    "description": "Eixo de Pesquisa: Saúde e Nutrição Humana",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 1 - Eixo"
+  },
+  {
+    "id": "1.7",
+    "parent": "0.0",
+    "name": "Inteligência Artificial e Transformação Digital",
+    "description": "Eixo de Pesquisa: Inteligência Artificial e Transformação Digital",
+    "value": 1,
+    "color": "#0288d1",
+    "_coment": "Nível 1 - Eixo"
+  },
+  {
+    "id": "2.1.1",
+    "parent": "1.1",
+    "name": "ECCDA",
+    "description": "Estratégias de criação direcionadas (do desmame ao abate)",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.1.1.1",
+    "parent": "2.1.1",
+    "name": "SUPSEC",
+    "description": "Impactos da suplementação estratégica na estação seca",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.1.2",
+    "parent": "2.1.1",
+    "name": "INDBIO",
+    "description": "Identificação de indicadores biológicos de desempenho",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.1.3",
+    "parent": "2.1.1",
+    "name": "SUPCAR",
+    "description": "Programação nutricional de características de carcaça",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.1.2",
+    "parent": "1.1",
+    "name": "FIDC",
+    "description": "Formulações inteligentes de dietas para confinamento",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.1.2.1",
+    "parent": "2.1.2",
+    "name": "PROCGR",
+    "description": "Estratégias direcionadas de processamento de grãos",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.2.2",
+    "parent": "2.1.2",
+    "name": "COPNUT",
+    "description": "Uso eficiente de coprodutos agroindustriais",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.2.3",
+    "parent": "2.1.2",
+    "name": "FIBRUM",
+    "description": "Uso estratégico de fontes e níveis de fibra",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.2.4",
+    "parent": "2.1.2",
+    "name": "INTERD",
+    "description": "Interações nutricionais em dietas de terminação",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.1.3",
+    "parent": "1.1",
+    "name": "ADICONF",
+    "description": "Aditivos para confinamento: aumentando os ganhos e reduzindo as emissões",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.1.3.1",
+    "parent": "2.1.3",
+    "name": "BROMO",
+    "description": "Impacto do bromofórmio",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.3.2",
+    "parent": "2.1.3",
+    "name": "REDMET",
+    "description": "Ingredientes estratégicos redutores de metano",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.3.3",
+    "parent": "2.1.3",
+    "name": "SYNACT",
+    "description": "Efeitos sinérgicos de aditivos com modos de ação contrastantes",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.3.4",
+    "parent": "2.1.3",
+    "name": "MICBIO",
+    "description": "Microbioma ruminal e biomarcadores",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.1.4",
+    "parent": "1.1",
+    "name": "MANPAS",
+    "description": "Manejo de pastagens ecologicamente correto",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.1.4.1",
+    "parent": "2.1.4",
+    "name": "GRAMLEG",
+    "description": "Avaliação de gramíneas e leguminosas para pastagens multiespécies",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.4.2",
+    "parent": "2.1.4",
+    "name": "DEVMP",
+    "description": "Desenvolvimento de práticas de manejo para pastagens multiespécies",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.4.3",
+    "parent": "2.1.4",
+    "name": "SAUSOLO",
+    "description": "Impacto na saúde do solo",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.4.4",
+    "parent": "2.1.4",
+    "name": "GEEPAS",
+    "description": "Emissões de gases de efeito estufa em pastagens multiespécies",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.1.5",
+    "parent": "1.1",
+    "name": "REPBOS",
+    "description": "Aumento da eficiência reprodutiva em novilhas Bos indicus",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.1.5.1",
+    "parent": "2.1.5",
+    "name": "HORREP",
+    "description": "Vias hormonais e metabólicas",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.5.2",
+    "parent": "2.1.5",
+    "name": "DIETREP",
+    "description": "Tratamentos dietéticos e idade ao primeiro parto",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.5.3",
+    "parent": "2.1.5",
+    "name": "PROTREP",
+    "description": "Protocolos hormonais para redução da idade ao primeiro parto",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.5.4",
+    "parent": "2.1.5",
+    "name": "GENMAT",
+    "description": "Marcadores genéticos e maturidade sexual precoce",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.1.6",
+    "parent": "1.1",
+    "name": "ISOEFIC",
+    "description": "Uso do rastreamento isotópico para verificar a origem da carne bovina e identificar animais eficientes",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.1.6.1",
+    "parent": "2.1.6",
+    "name": "ISOPERF",
+    "description": "Perfis isotópicos dos componentes da dieta",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.6.2",
+    "parent": "2.1.6",
+    "name": "ISODATA",
+    "description": "Banco de dados de perfis isotópicos e regiões",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.1.6.3",
+    "parent": "2.1.6",
+    "name": "ISOID",
+    "description": "Isótopos para identificar animais eficientes",
+    "value": 1,
+    "color": "#2b7a0b",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.2.1",
+    "parent": "1.2",
+    "name": "TECDET",
+    "description": "Tecnologias Automatizadas de Detecção e Classificação",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.2.1.1",
+    "parent": "2.2.1",
+    "name": "SENCAR",
+    "description": "Desenvolvimento de sensores e sistemas para detectar atributos de qualidade da carne",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.2.1.2",
+    "parent": "2.2.1",
+    "name": "AVALCA",
+    "description": "Equipamentos para avaliação de carcaças para diferentes mercados",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.2.1.3",
+    "parent": "2.2.1",
+    "name": "INSIMP",
+    "description": "Sistemas de inspeção em linha para impurezas",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.2.1.4",
+    "parent": "2.2.1",
+    "name": "VALEFI",
+    "description": "Validação de equipamentos para eficiência operacional e rendimento",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.2.2",
+    "parent": "1.2",
+    "name": "MICSEG",
+    "description": "Estratégias de Segurança Microbiológica e Descontaminação",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.2.2.1",
+    "parent": "2.2.2",
+    "name": "DETPAT",
+    "description": "Sistemas automatizados para detecção de patógenos",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.2.2.2",
+    "parent": "2.2.2",
+    "name": "METRED",
+    "description": "Métodos como UV, luz pulsada e ácidos orgânicos para redução microbiana",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.2.2.3",
+    "parent": "2.2.2",
+    "name": "MAPRAM",
+    "description": "Mapeamento de bactérias resistentes a antimicrobianos",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.2.3",
+    "parent": "1.2",
+    "name": "POSCAR",
+    "description": "Processos Pós-Abate e Qualidade da Carne",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.2.3.1",
+    "parent": "2.2.3",
+    "name": "CARDFD",
+    "description": "Investigação da carne DFD",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.2.3.2",
+    "parent": "2.2.3",
+    "name": "RESFIB",
+    "description": "Técnicas de resfriamento para melhor textura",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.2.3.3",
+    "parent": "2.2.3",
+    "name": "MATCUT",
+    "description": "Protocolos de maturação personalizados",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.2.3.4",
+    "parent": "2.2.3",
+    "name": "CONGEL",
+    "description": "Efeitos do congelamento no processamento",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.2.4",
+    "parent": "1.2",
+    "name": "EMBSUS",
+    "description": "Inovação de produtos e soluções de embalagens sustentáveis",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.2.4.1",
+    "parent": "2.2.4",
+    "name": "CORTES",
+    "description": "Desenvolvimento de novos cortes",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.2.4.2",
+    "parent": "2.2.4",
+    "name": "EMBREC",
+    "description": "Sistemas de embalagem recicláveis",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.2.4.3",
+    "parent": "2.2.4",
+    "name": "PRECAR",
+    "description": "Tecnologias de preservação para carne embalada",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.2.4.4",
+    "parent": "2.2.4",
+    "name": "EMBATI",
+    "description": "Embalagens ativas e inteligentes com foco antioxidante",
+    "value": 1,
+    "color": "#1f4e79",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.3.1",
+    "parent": "1.3",
+    "name": "BIOGORD",
+    "description": "Produção avançada de biocombustíveis a partir de gordura bovina",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.3.1.1",
+    "parent": "2.3.1",
+    "name": "SAFGORD",
+    "description": "Ampliação industrial da produção de SAF a partir de sebo bovino",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.1.2",
+    "parent": "2.3.1",
+    "name": "HEFLOC",
+    "description": "Rotas HEFA com catalisadores locais",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.1.3",
+    "parent": "2.3.1",
+    "name": "MODBIO",
+    "description": "Modelos modulares descentralizados de produção de biocombustíveis",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.1.4",
+    "parent": "2.3.1",
+    "name": "VERTBIO",
+    "description": "Biodiesel 100% verde com biometanol celulósico",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.1.5",
+    "parent": "2.3.1",
+    "name": "CICLOBIO",
+    "description": "Avaliação do ciclo de vida de combustíveis sustentáveis",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.3.2",
+    "parent": "1.3",
+    "name": "VECORU",
+    "description": "Valorização Energética e Agronômica do Conteúdo Ruminal",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.3.2.1",
+    "parent": "2.3.2",
+    "name": "BIODIG",
+    "description": "Implementação de biodigestores modulares em unidades de abate",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.2.2",
+    "parent": "2.3.2",
+    "name": "MODENER",
+    "description": "Modelagem matemática para dimensionamento energético",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.2.3",
+    "parent": "2.3.2",
+    "name": "BIOFERT",
+    "description": "Produção de biofertilizantes orgânicos de alta eficiência",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.2.4",
+    "parent": "2.3.2",
+    "name": "SINTEBIO",
+    "description": "Sistemas integrados de energia e biofertilizantes",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.2.5",
+    "parent": "2.3.2",
+    "name": "LOGRUM",
+    "description": "Logística e viabilidade técnico-econômica do conteúdo ruminal",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.3.3",
+    "parent": "1.3",
+    "name": "CRABIO",
+    "description": "Desenvolvimento de Bioprodutos a partir do Craqueamento de Gorduras e Proteínas",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.3.3.1",
+    "parent": "2.3.3",
+    "name": "CRAPROT",
+    "description": "Craqueamento térmico/catalítico de proteínas bovinas",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.3.2",
+    "parent": "2.3.3",
+    "name": "BIOCOL",
+    "description": "Biofilmes, hidrogéis e scaffolds regenerativos à base de colágeno e gelatina técnica",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.3.3",
+    "parent": "2.3.3",
+    "name": "ADIPROT",
+    "description": "Formulação de aditivos para rações a partir de materiais proteicos residuais",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.3.4",
+    "parent": "2.3.3",
+    "name": "COLFUN",
+    "description": "Extração seletiva e funcionalização de colágeno para cosméticos e biomateriais",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.3.4",
+    "parent": "1.3",
+    "name": "INOVBIO",
+    "description": "Inovação Tecnológica e Engenharia de Equipamentos para Biorrefinarias",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.3.4.1",
+    "parent": "2.3.4",
+    "name": "EQUIBIO",
+    "description": "Desenvolvimento de equipamentos nacionais",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.4.2",
+    "parent": "2.3.4",
+    "name": "SIMUBIO",
+    "description": "Ambientes virtuais para treinamento de operadores e simulação de processos",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.4.3",
+    "parent": "2.3.4",
+    "name": "CONTAUT",
+    "description": "Controle avançado de processos e automação para bioenergia",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.4.4",
+    "parent": "2.3.4",
+    "name": "PILBIO",
+    "description": "Biorrefinarias piloto multiuso integradas com unidades de proteína animal",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.3.5",
+    "parent": "1.3",
+    "name": "REGBIO",
+    "description": "Inteligência Regulatória e Governança para Biorrefinarias",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.3.5.1",
+    "parent": "2.3.5",
+    "name": "LEGBIO",
+    "description": "Mapeamento comparativo da legislação aplicável",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.5.2",
+    "parent": "2.3.5",
+    "name": "PLATREG",
+    "description": "Plataforma de inteligência regulatória",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.5.3",
+    "parent": "2.3.5",
+    "name": "ESTREG",
+    "description": "Estudos regulatórios para novos bioprodutos",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.5.4",
+    "parent": "2.3.5",
+    "name": "POLIBIO",
+    "description": "Propostas de políticas públicas e instrumentos legais",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.3.5.5",
+    "parent": "2.3.5",
+    "name": "CAPREG",
+    "description": "Capacitação em certificação e governança regulatória",
+    "value": 1,
+    "color": "#ff8c00",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.4.1",
+    "parent": "1.4",
+    "name": "QUAERA",
+    "description": "Aplicação de técnicas para avaliação da qualidade, processos e rastreabilidade",
+    "value": 1,
+    "color": "#d32f2f",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.4.1.1",
+    "parent": "2.4.1",
+    "name": "RMNRA",
+    "description": "Ressonância Magnética Nuclear na rastreabilidade e qualidade",
+    "value": 1,
+    "color": "#d32f2f",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.4.2",
+    "parent": "1.4",
+    "name": "SEGALI",
+    "description": "Segurança Alimentar e Qualidade de Produtos",
+    "value": 1,
+    "color": "#d32f2f",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.4.2.1",
+    "parent": "2.4.2",
+    "name": "CONTAM",
+    "description": "Monitoramento de contaminantes",
+    "value": 1,
+    "color": "#d32f2f",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.4.3",
+    "parent": "1.4",
+    "name": "SENCHA",
+    "description": "Desenvolvimento de sensores de baixo custo para temperatura na cadeia cárnea",
+    "value": 1,
+    "color": "#d32f2f",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.4.3.1",
+    "parent": "2.4.3",
+    "name": "SMARTS",
+    "description": "Indicador térmico “SmartSeal”",
+    "value": 1,
+    "color": "#d32f2f",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.4.4",
+    "parent": "1.4",
+    "name": "EMBBIO",
+    "description": "Desenvolvimento de embalagens biodegradáveis e comestíveis",
+    "value": 1,
+    "color": "#d32f2f",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.4.4.1",
+    "parent": "2.4.4",
+    "name": "FILBIO",
+    "description": "Filme biodegradável",
+    "value": 1,
+    "color": "#d32f2f",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.4.4.2",
+    "parent": "2.4.4",
+    "name": "VIDFIL",
+    "description": "Aplicação e vida de prateleira",
+    "value": 1,
+    "color": "#d32f2f",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.4.4.3",
+    "parent": "2.4.4",
+    "name": "CONSUM",
+    "description": "Aceitabilidade pelo consumidor",
+    "value": 1,
+    "color": "#d32f2f",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.5.1",
+    "parent": "1.5",
+    "name": "VALBIO",
+    "description": "Estratégias de agregação de valor à carne com compostos bioativos",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.5.1.1",
+    "parent": "2.5.1",
+    "name": "METCAR",
+    "description": "Metabólitos da carne",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.5.1.2",
+    "parent": "2.5.1",
+    "name": "BIOMET",
+    "description": "Bioinformática e metabolômica",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.5.1.3",
+    "parent": "2.5.1",
+    "name": "SELSUP",
+    "description": "Suplementação com selênio",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.5.1.4",
+    "parent": "2.5.1",
+    "name": "SELFOR",
+    "description": "Biofortificação com selênio",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.5.1.5",
+    "parent": "2.5.1",
+    "name": "LIPANT",
+    "description": "Perfil lipídico e enzimas antioxidantes",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.5.2",
+    "parent": "1.5",
+    "name": "HIDESG",
+    "description": "Eficiência hídrica e ambiental com foco ESG",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.5.2.1",
+    "parent": "2.5.2",
+    "name": "HIDCARN",
+    "description": "Eficiência hídrica da carne",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.5.3",
+    "parent": "1.5",
+    "name": "EFIECO",
+    "description": "Eficiência econômica e internacionalização",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.5.3.1",
+    "parent": "2.5.3",
+    "name": "INTENS",
+    "description": "Produção intensiva",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.5.3.2",
+    "parent": "2.5.3",
+    "name": "DEMASI",
+    "description": "Demanda internacional e mudanças demográficas",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.5.3.3",
+    "parent": "2.5.3",
+    "name": "DESECO",
+    "description": "Desempenho econômico e financeiro",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.5.3.4",
+    "parent": "2.5.3",
+    "name": "ESGFIN",
+    "description": "ESG e finanças sustentáveis",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.5.4",
+    "parent": "1.5",
+    "name": "VALFUN",
+    "description": "Valorização funcional da carne e coprodutos",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.5.4.1",
+    "parent": "2.5.4",
+    "name": "PREDIQ",
+    "description": "Predição de qualidade com espectroscopia e sensorial",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.5.4.2",
+    "parent": "2.5.4",
+    "name": "AMACEN",
+    "description": "Amaciamento com enzimas vegetais",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.5.4.3",
+    "parent": "2.5.4",
+    "name": "GELFUN",
+    "description": "Géis cárneos funcionais",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.5.4.4",
+    "parent": "2.5.4",
+    "name": "PEPCOP",
+    "description": "Peptídeos bioativos de coprodutos",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.5.4.5",
+    "parent": "2.5.4",
+    "name": "BIOLAC",
+    "description": "Biotecnologia sustentável com bactérias láticas",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.5.5",
+    "parent": "1.5",
+    "name": "IMAFOR",
+    "description": "Uso de imagens para monitoramento de oferta e qualidade forrageira",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.5.5.1",
+    "parent": "2.5.5",
+    "name": "PREABT",
+    "description": "Imagens para predição de abate",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.5.5.2",
+    "parent": "2.5.5",
+    "name": "INDFEZG",
+    "description": "Indicadores ambientais e produtivos para planejamento fazendas e ESG",
+    "value": 1,
+    "color": "#388e3c",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.6.1",
+    "parent": "1.6",
+    "name": "INFNUT",
+    "description": "Interação entre infecção, nutrição e imunidade",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.6.1.1",
+    "parent": "2.6.1",
+    "name": "SELCAR",
+    "description": "Efeitos Agudos do Consumo de Carne com e sem Selênio",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.6.1.2",
+    "parent": "2.6.1",
+    "name": "PROHIV",
+    "description": "Suplementação de proteína bovina hidrolisada para HIV",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.6.2",
+    "parent": "1.6",
+    "name": "NUTESP",
+    "description": "Nutrição esportiva - esportes de alto rendimento e estilo de vida",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.6.2.1",
+    "parent": "2.6.2",
+    "name": "CARSUP",
+    "description": "Consumo de carne e suplementos em atletas",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.6.2.2",
+    "parent": "2.6.2",
+    "name": "CLACAR",
+    "description": "Carne/CLA e inflamação em atletas",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.6.3",
+    "parent": "1.6",
+    "name": "DIETNU",
+    "description": "Dieta e estado nutricional",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.6.3.1",
+    "parent": "2.6.3",
+    "name": "SUPPCM",
+    "description": "Suporte dietético na recuperação de pacientes com PCM",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.6.3.2",
+    "parent": "2.6.3",
+    "name": "MICCAR",
+    "description": "Carne bovina, microbiota e remodelação cardíaca pós-infarto",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.6.3.3",
+    "parent": "2.6.3",
+    "name": "HORMCAR",
+    "description": "Efeitos clínicos e hormonais da intervenção com produtos de carne bovina",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.6.4",
+    "parent": "1.6",
+    "name": "OMICAR",
+    "description": "Abordagens ômicas e efeito do consumo de carne",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.6.4.1",
+    "parent": "2.6.4",
+    "name": "INVITRO",
+    "description": "Ensaios in vitro de digestão e absorção gastrintestinal",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.6.4.2",
+    "parent": "2.6.4",
+    "name": "MODANI",
+    "description": "Efeitos da carne bovina em modelos animais",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.6.4.3",
+    "parent": "2.6.4",
+    "name": "METAGUD",
+    "description": "Efeitos agudos da carne bovina no metabolismo pós-prandial",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.6.4.4",
+    "parent": "2.6.4",
+    "name": "DIFCAR",
+    "description": "Efeitos de diferentes tipos de carne no metabolismo pós-prandial",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.6.4.5",
+    "parent": "2.6.4",
+    "name": "PROTFON",
+    "description": "Efeitos de diferentes fontes de proteína dietética no metabolismo pós-prandial",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "3.6.4.6",
+    "parent": "2.6.4",
+    "name": "CRONMET",
+    "description": "Efeitos crônicos da carne bovina na saúde cardiometabólica e microbiota intestinal",
+    "value": 1,
+    "color": "#7b1fa2",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.7.1",
+    "parent": "1.7",
+    "name": "INFRAI",
+    "description": "Infraestrutura computacional",
+    "value": 1,
+    "color": "#0288d1",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.7.1.1",
+    "parent": "2.7.1",
+    "name": "Dev",
+    "description": "Em definição",
+    "value": 1,
+    "color": "#0288d1",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.7.2",
+    "parent": "1.7",
+    "name": "INTERO",
+    "description": "Interoperabilidade de dados",
+    "value": 1,
+    "color": "#0288d1",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.7.2.1",
+    "parent": "2.7.2",
+    "name": "Dev",
+    "description": "Em definição",
+    "value": 1,
+    "color": "#0288d1",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.7.3",
+    "parent": "1.7",
+    "name": "OTDMUL",
+    "description": "Otimização e Tomada de Decisão Multicritério",
+    "value": 1,
+    "color": "#0288d1",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.7.3.1",
+    "parent": "2.7.3",
+    "name": "Dev",
+    "description": "Em definição",
+    "value": 1,
+    "color": "#0288d1",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.7.4",
+    "parent": "1.7",
+    "name": "CIDAPE",
+    "description": "Ciência de Dados, Probabilidade e Estatísticas",
+    "value": 1,
+    "color": "#0288d1",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.7.4.1",
+    "parent": "2.7.4",
+    "name": "Dev",
+    "description": "Em definição",
+    "value": 1,
+    "color": "#0288d1",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.7.5",
+    "parent": "1.7",
+    "name": "IAAMAC",
+    "description": "IA e Aprendizado de Máquina",
+    "value": 1,
+    "color": "#0288d1",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.7.5.1",
+    "parent": "2.7.5",
+    "name": "Dev",
+    "description": "Em definição",
+    "value": 1,
+    "color": "#0288d1",
+    "_coment": "Nível 3 - Projeto"
+  },
+  {
+    "id": "2.7.6",
+    "parent": "1.7",
+    "name": "COMIAI",
+    "description": "Comunicação dos projetos de IA",
+    "value": 1,
+    "color": "#0288d1",
+    "_coment": "Nível 2 - Work Package"
+  },
+  {
+    "id": "3.7.6.1",
+    "parent": "2.7.6",
+    "name": "Dev",
+    "description": "Em definição",
+    "value": 1,
+    "color": "#0288d1",
+    "_coment": "Nível 3 - Projeto"
+  }
+]
