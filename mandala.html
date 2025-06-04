@@ -7,6 +7,14 @@
 
   <style>
     * { margin: 0; padding: 0; }
+    /* #container {
+      position: relative;
+      z-index: 0;
+    }
+    .highcharts-tooltip {
+      z-index: 9999 !important;
+      pointer-events: auto;
+    } */
     .highcharts-figure {
       min-width: 320px;
       max-width: 1000px;
@@ -28,6 +36,9 @@
       z-index: 999;
     }
     .header-container {
+      overflow: visible !important;
+      position: relative !important;
+      z-index: 2; 
       max-width: 1000px;
       margin: 0 auto;
       display: flex;
@@ -89,7 +100,19 @@
   </style>
 </head>
 <body>
-
+  <script>
+    Highcharts.setOptions({
+  tooltip: {
+    outside: true,
+    positioner: function (labelWidth, labelHeight, point) {
+      return {
+        x: point.plotX + this.chart.plotLeft,
+        y: point.plotY + this.chart.plotTop - labelHeight - 20
+      };
+    }
+  }
+});
+  </script>
 <header>
   <div class="header-container">
     <span class="header-title">CPA – Centro de Pesquisa Aplicada</span>
@@ -120,9 +143,69 @@ fetch('./sunburst_cpa_completo_final.json')
   .then(response => response.json())
   .then(data => {
     Highcharts.chart('container', {
-      chart: { height: '100%' },
+      chart: {
+        height: '100%',
+        events: {
+          load: function () {
+            const tooltipEl = this.container.parentNode.querySelector('.highcharts-tooltip');
+            if (tooltipEl) {
+              tooltipEl.style.zIndex = '9999';
+            }
+          }
+        }
+      },
       title: { text: 'CPA - Centro de Pesquisa Aplicada - Minerva Foods e USP' },
       subtitle: { text: 'Fonte: Elaborado pelos autores' },
+
+      tooltip: {
+        useHTML: true,
+        outside: true,
+        formatter: function () {
+          const point = this.point;
+          if (point.id === '0.0') return '';
+
+          const name = `<div style="font-weight: bold; font-size: 14px; margin-bottom: 4px;">${point.name}</div>`;
+          const desc = point.description ? `<div style="margin-bottom: 4px;">${point.description}</div>` : '';
+
+          if (point.parent === '0.0') {
+            return `
+              <div style="max-width: 1000px; word-wrap: break-word; word-break: break-word;">
+                ${name}
+                ${desc}
+                <div><b>Pesquisador Principal:</b> ${point.pesquisadorPrincipal || '—'}</div>
+                <div><b>Responsável Minerva:</b> ${point.responsavelMinerva || '—'}</div>
+              </div>
+            `;
+          }
+
+          const parent = this.series.data.find(p => p.id === point.parent);
+          if (parent && parent.parent === '0.0') {
+            return `
+              <div style="max-width: 1000px; word-wrap: break-word; word-break: break-word;">
+                ${name}
+                ${desc}
+                <div><b>Pesquisador Responsável:</b> ${point.pesquisadorResponsavel || '—'}</div>
+              </div>
+            `;
+          }
+
+          return `
+            <div style="max-width: 1000px; word-wrap: break-word; word-break: break-word;">
+              ${name}
+              ${desc}
+            </div>
+          `;
+        },
+        backgroundColor: 'rgba(255, 255, 255, 0.95)',
+        borderColor: '#666',
+        borderRadius: 8,
+        borderWidth: 1,
+        shadow: true,
+        style: {
+          fontSize: '13px'
+        }
+      },
+
       series: [{
         type: 'sunburst',
         data: data,
@@ -135,10 +218,10 @@ fetch('./sunburst_cpa_completo_final.json')
           formatter: function () {
             if (this.point.id === '0.0') {
               return `
-                <div style="text-align:center; line-height:1.3;">
-                  <div style="font-size: 15px;">Minerva Foods</div>
-                  <div style="font-size: 22px; font-weight: bold;">CPA</div>
-                  <div style="font-size: 15px;">USP</div>
+                <div style="text-align: center; line-height: 1.3;">
+                  <div style="font-size: 12px;">Minerva Foods</div>
+                  <div style="font-size: 18px; font-weight: bold;">CPA</div>
+                  <div style="font-size: 12px;">USP</div>
                 </div>
               `;
             }
@@ -150,29 +233,10 @@ fetch('./sunburst_cpa_completo_final.json')
                 ${parts.map(line => `<div>${line}</div>`).join('')}
               </div>
             `;
-          }
-        },
-        tooltip: {
-          useHTML: true,
-          outside: true,
-          style: {
-            zIndex: 2147483647,
-            fontSize: '13px'
           },
-          backgroundColor: 'rgba(255, 255, 255, 0.95)',
-          borderColor: '#666',
-          borderRadius: 8,
-          borderWidth: 1,
-          shadow: true,
-          headerFormat: '',
-          pointFormat: `
-            <div style="max-width: 300px;">
-              <div style="font-weight: bold; font-size: 14px; margin-bottom: 4px;">{point.name}</div><br/>
-              <div style="margin-bottom: 4px;">{point.description}</div><br/>
-              <div><b>Pesquisador Principal:</b> {point.pesquisadorPrincipal}</div><br/>
-              <div><b>Responsáveis Minerva:</b> {point.responsavelMinerva}</div>
-            </div>
-          `
+          style: {
+            textOutline: 'none'
+          }
         },
         levels: [
           {
