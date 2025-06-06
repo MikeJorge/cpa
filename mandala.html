@@ -276,10 +276,39 @@ fetch('./sunburst_com_laboratorios_nivel4.json')
           },
           { level: 1, levelIsConstant: false },
           { level: 2, colorByPoint: false },
-          { level: 3, colorByPoint: false },
-          { level: 4 }, // ← WP
+          { level: 3, colorByPoint: false }, // ← WP, sem alteração aqui
+
           {
-            level: 5, // ← Este é o anel dos LABORATÓRIOS (nível 4 lógico)
+            level: 4, // ← PROJETOS
+            colorByPoint: false,
+            dataLabels: {
+              useHTML: true,
+              formatter: function () {
+                const level = this.point.id.split('.').length - 1;
+                const name = this.point.name || '';
+                const maxLen = (level === 3) ? 10 : 25;
+                const parts = name.match(new RegExp(`.{1,${maxLen}}`, 'g')) || [];
+
+                return `
+                  <div style="text-align: center; font-size: 11px; line-height: 1.0; padding: 0;">
+                    ${parts.map(line => `<div>${line}</div>`).join('')}
+                  </div>
+                `;
+              },
+              style: {
+                textOutline: 'none'
+              },
+              filter: {
+                property: 'innerArcLength',
+                operator: '>',
+                value: 10
+              },
+              rotationMode: 'auto' // ✅ Gira o texto levemente para se ajustar ao arco
+            }
+          },
+
+          {
+            level: 5, // LABS
             colorByPoint: false,
             levelSize: {
               value: 0.2,
