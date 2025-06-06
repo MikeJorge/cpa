@@ -7,6 +7,14 @@
 
   <style>
     * { margin: 0; padding: 0; }
+    /* #container {
+      position: relative;
+      z-index: 0;
+    }
+    .highcharts-tooltip {
+      z-index: 9999 !important;
+      pointer-events: auto;
+    } */
     .highcharts-figure {
       min-width: 320px;
       max-width: 1000px;
@@ -56,7 +64,7 @@
 
     .eixo-transversal {
       background-color: #eef3fc;
-      border-left: 6px solid #1d4ed8;
+      border-left: 6px solid #1e90ff;
       padding: 1rem 1.5rem;
       margin: 1.5rem auto 2rem;
       font-family: "Segoe UI", sans-serif;
@@ -72,7 +80,7 @@
     }
 
     .eixo-transversal::before {
-      content: "🧪";
+      content: "🧪" "🔬";
       font-size: 1.3rem;
     }
 
@@ -94,18 +102,17 @@
 <body>
   <script>
     Highcharts.setOptions({
-      tooltip: {
-        outside: true,
-        positioner: function (labelWidth, labelHeight, point) {
-          return {
-            x: point.plotX + this.chart.plotLeft,
-            y: point.plotY + this.chart.plotTop - labelHeight - 20
-          };
-        }
-      }
-    });
+  tooltip: {
+    outside: true,
+    positioner: function (labelWidth, labelHeight, point) {
+      return {
+        x: point.plotX + this.chart.plotLeft,
+        y: point.plotY + this.chart.plotTop - labelHeight - 20
+      };
+    }
+  }
+});
   </script>
-
 <header>
   <div class="header-container">
     <span class="header-title">CPA – Centro de Pesquisa Aplicada</span>
@@ -128,11 +135,14 @@
 </figure>
 
 <div class="eixo-transversal">
-  <strong>Eixo Transversal</strong> Apoio dos laboratórios: qualidade, energia nuclear na agricultura, química e bioquímica de alimentos
+  <strong>Eixo Transversal</strong><br>
+  <strong style="color: #1e90ff;">Lab</strong> Laboratórios da Escola Superior de Agricultura “Luiz de Queiroz” – Esalq/USP, em conexão com os laboratórios das instituições: USP, UNESP, UNICAMP, UFSCar, IZ - Instituto de Zootecnia, INPE e EMBRAPA.
 </div>
 
+
 <script>
-fetch('./sunburst_cpa_completo_final.json')
+//fetch('data/sunburst_cpa_completo_final.json') // caminho relativo ao arquivo
+fetch('./sunburst_com_laboratorios_nivel4.json')
   .then(response => response.json())
   .then(data => {
     Highcharts.chart('container', {
@@ -155,11 +165,25 @@ fetch('./sunburst_cpa_completo_final.json')
         outside: true,
         formatter: function () {
           const point = this.point;
-          if (point.id === '0.0') return '';
+
+          // Nível 0: raiz
+          if (point.id === '0.0') {
+            const name = `<div style="font-weight: bold; font-size: 14px; margin-bottom: 4px;">Centro de Pesquisa Aplicada (CPA)</div>`;
+            const desc = `<div style="margin-bottom: 4px;">Uma iniciativa da Minerva Foods com apoio da FAPESP</div>`;
+            const address = `<div><b>Endereço:</b> Av. Pádua Dias, 11 – Piracicaba, SP – CEP 13418-900</div>`;
+            return `
+              <div style="max-width: 1000px; word-wrap: break-word; word-break: break-word;">
+                ${name}
+                ${desc}
+                ${address}
+              </div>
+            `;
+          }
 
           const name = `<div style="font-weight: bold; font-size: 14px; margin-bottom: 4px;">${point.name}</div>`;
           const desc = point.description ? `<div style="margin-bottom: 4px;">${point.description}</div>` : '';
 
+          // Nível 1
           if (point.parent === '0.0') {
             return `
               <div style="max-width: 1000px; word-wrap: break-word; word-break: break-word;">
@@ -171,6 +195,7 @@ fetch('./sunburst_cpa_completo_final.json')
             `;
           }
 
+          // Nível 2
           const parent = this.series.data.find(p => p.id === point.parent);
           if (parent && parent.parent === '0.0') {
             return `
@@ -182,6 +207,18 @@ fetch('./sunburst_cpa_completo_final.json')
             `;
           }
 
+          // Nível 4 – Laboratórios
+          if (point.id && point.id.includes('-lab')) {
+            return `
+              <div style="max-width: 1000px; word-wrap: break-word; word-break: break-word;">
+                ${name}
+                ${desc}
+                <div><b>Pesquisador Principal:</b> ${point.pesquisadorPrincipal || '—'}</div>
+              </div>
+            `;
+          }
+
+          // Nível 3 ou outros
           return `
             <div style="max-width: 1000px; word-wrap: break-word; word-break: break-word;">
               ${name}
@@ -235,21 +272,24 @@ fetch('./sunburst_cpa_completo_final.json')
           {
             level: 0,
             levelIsConstant: true,
-            dataLabels: {
-              allowOverlap: true
-            }
+            dataLabels: { allowOverlap: true }
           },
           { level: 1, levelIsConstant: false },
           { level: 2, colorByPoint: false },
           { level: 3, colorByPoint: false },
+          { level: 4 }, // ← WP
           {
-            level: 4,
-            innerRadius: '100%',
-            outerRadius: '108%',
-            borderWidth: 2,
-            borderColor: '#4a90e2',
-            color: 'rgba(173, 216, 230, 0.4)',
-            dataLabels: { enabled: false }
+            level: 5, // ← Este é o anel dos LABORATÓRIOS (nível 4 lógico)
+            colorByPoint: false,
+            levelSize: {
+              value: 0.2,
+              unit: 'weight'
+            },
+            dataLabels: {
+              enabled: false
+            },
+            borderWidth: 0,
+            color: '#1e90ff'
           }
         ]
       }]
