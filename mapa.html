@@ -1,149 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CPA – Center Map</title>
+  <style>
+    * { margin: 0; padding: 0; }
+    body { font-family: sans-serif; }
+    #container { height: 800px; max-width: 1200px; margin: 1rem auto; }
+    .filters {
+      max-width: 1200px;
+      margin: 1rem auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .filters label { font-weight: bold; margin-right: 0.5rem; }
+    .filters select { padding: 0.3rem; font-size: 0.9rem; }
 
-<!DOCTYPE HTML>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CPA – Mapa de Localidades</title>
+    #legend {
+      max-width: 1200px;
+      margin: 0 auto 1rem;
+      font-size: 0.9rem;
+    }
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
+    header {
+      width: 100%;
+      background-color: #f5f5f7;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
 
-      #container {
-        height: 900px;
-        min-width: 310px;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
+    .header-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-      .loading {
-        margin-top: 10em;
-        text-align: center;
-        color: gray;
-      }
+    .header-title { font-size: 1.1rem; font-weight: 500; }
+    .back-link {
+      font-size: 0.95rem;
+      color: #0071e3;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-      header {
-        width: 100%;
-        background-color: #f5f5f7;
-        border-bottom: 1px solid #ddd;
-        padding: 1rem 2rem;
-        position: sticky;
-        top: 0;
-        z-index: 999;
-      }
+    #detail-panel {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 30%;
+      height: 100%;
+      background: #fff;
+      padding: 1rem;
+      overflow-y: auto;
+      border-left: 1px solid #ccc;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
 
-      .header-container {
-        max-width: 1000px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", sans-serif;
-      }
+    @media (max-width: 800px) {
+      #detail-panel { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <span class="header-title">CPA – Applied Research Centers</span>
+      <a href="./index.html" class="back-link">← Back</a>
+    </div>
+  </header>
 
-      .header-title {
-        font-size: 1.1rem;
-        font-weight: 500;
-        color: #1d1d1f;
-      }
+  <div class="filters">
+    <div><label for="filter-continent">Continent:</label><select id="filter-continent"><option value="">All</option></select></div>
+    <div><label for="filter-country">Country:</label><select id="filter-country"><option value="">All</option></select></div>
+    <div><label for="filter-governance">Governance:</label><select id="filter-governance"><option value="">All</option></select></div>
+    <div><label for="filter-tropical">Tropical Focus:</label>
+      <select id="filter-tropical">
+        <option value="">All</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Partial">Partial</option>
+        <option value="Global">Global</option>
+      </select>
+    </div>
+  </div>
 
-      .back-link {
-        font-size: 0.95rem;
-        color: #0071e3;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.2s ease;
-      }
+  <div id="legend">
+    <strong>Legend – Continent:</strong>
+    <span><span style="background:#f94144;width:12px;height:12px;display:inline-block;margin-right:4px;"></span>Africa</span>
+    <span><span style="background:#f3722c;width:12px;height:12px;display:inline-block;margin:0 4px;"></span>Asia</span>
+    <span><span style="background:#f9c74f;width:12px;height:12px;display:inline-block;margin:0 4px;"></span>Europe</span>
+    <span><span style="background:#43aa8b;width:12px;height:12px;display:inline-block;margin:0 4px;"></span>North America</span>
+    <span><span style="background:#577590;width:12px;height:12px;display:inline-block;margin:0 4px;"></span>South America</span>
+    <span><span style="background:#9d4edd;width:12px;height:12px;display:inline-block;margin:0 4px;"></span>Oceania</span>
+  </div>
 
-      .back-link:hover {
-        color: #005bb5;
-      }
-      @media (max-width: 600px) {
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
+  <div id="container" tabindex="-1"></div>
 
-  .header-title {
-    font-size: 1rem;
-  }
+  <div id="detail-panel">
+    <button onclick="closeDetail()" style="float:right; font-size:1.2rem; background:none; border:none; cursor:pointer;">✖</button>
+    <h2 id="detail-title"></h2>
+    <p><strong>Acronym:</strong> <span id="detail-acronym"></span></p>
+    <p><strong>Location:</strong> <span id="detail-local"></span></p>
+    <p><strong>Country:</strong> <span id="detail-country"></span></p>
+    <p><strong>Continent:</strong> <span id="detail-continent"></span></p>
+    <p><strong>Year:</strong> <span id="detail-year"></span></p>
+    <p><strong>Governance:</strong> <span id="detail-governance"></span></p>
+    <p><strong>Tropical Focus:</strong> <span id="detail-tropical"></span></p>
+    <p><strong>Priority Area:</strong> <span id="detail-priority"></span></p>
+    <p><strong>Target Audience:</strong> <span id="detail-audience"></span></p>
+  </div>
 
-  .back-link {
-    font-size: 0.9rem;
-  }
-}
+  <script src="./src-mapa/code/highmaps.js"></script>
+  <script src="./src-mapa/code/modules/exporting.js"></script>
+  <script src="./src-mapa/code/modules/offline-exporting.js"></script>
 
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="header-container">
-        <span class="header-title">CPA – Centro de Pesquisa Aplicada</span>
-        <a href="./index.html" class="back-link">← Voltar</a>
-      </div>
-    </header>
+  <script>
+    let allData = [];
+    let currentMap = null;
 
-    <script src="./src-mapa/code/highmaps.js"></script>
-    <script src="./src-mapa/code/modules/exporting.js"></script>
-    <script src="./src-mapa/code/modules/offline-exporting.js"></script>
-    <script src="./src-mapa/code/modules/accessibility.js"></script>
+    function normalizeGovernance(value) {
+      if (!value) return '';
+      const v = value.toLowerCase();
+      if (v.includes("public") && v.includes("private")) return "Hybrid";
+      if (v.includes("public")) return "Public";
+      if (v.includes("private")) return "Private";
+      return "Other";
+    }
 
-    <div id="container"></div>
+    function closeDetail() {
+      document.getElementById('detail-panel').style.display = 'none';
+      renderMap(filterData(), currentMap);
+    }
 
-    <script>
-      Promise.all([
-        fetch('https://code.highcharts.com/mapdata/custom/world-highres2.topo.json').then(res => res.json()),
-        fetch('./dados-mapa.json').then(res => res.json())
-      ])
-      .then(([topology, points]) => {
-        Highcharts.mapChart('container', {
-          chart: {
-            map: topology
-          },
-          title: {
-            text: 'Mapa de Localidades'
-          },
-          accessibility: {
-            description: 'Mapa com pontos definidos por latitude e longitude.'
-          },
-          mapNavigation: {
-            enabled: true
-          },
-          tooltip: {
-            headerFormat: '',
-            pointFormat: '<b>{point.name}</b><br>Lat: {point.lat}, Lon: {point.lon}'
-          },
-          series: [{
-            name: 'Great Britain',
-            borderColor: '#A0A0A0',
-            nullColor: 'rgba(200, 200, 200, 0.3)',
-            showInLegend: false
-          }, {
-            name: 'Separators',
-            type: 'mapline',
-            nullColor: '#707070',
+    function populateFilters(data) {
+      const getUniqueSorted = (key) => [...new Set(data.map(d => d[key]).filter(Boolean))].sort();
+      const addOptions = (id, list) => {
+        const sel = document.getElementById(id);
+        sel.innerHTML = '<option value="">All</option>';
+        list.forEach(v => {
+          const opt = document.createElement("option");
+          opt.value = v;
+          opt.textContent = v;
+          sel.appendChild(opt);
+        });
+      };
+      addOptions("filter-continent", getUniqueSorted("continent"));
+      addOptions("filter-country", getUniqueSorted("country"));
+      addOptions("filter-governance", getUniqueSorted("governance_normalized"));
+    }
+
+    function filterData() {
+      const f = id => document.getElementById(id).value;
+      return allData.filter(d =>
+        (!f("filter-continent") || d.continent === f("filter-continent")) &&
+        (!f("filter-country") || d.country === f("filter-country")) &&
+        (!f("filter-governance") || d.governance_normalized === f("filter-governance")) &&
+        (!f("filter-tropical") || (d.focus_tropical || "").trim() === f("filter-tropical"))
+      );
+    }
+
+    function showDetailPanel(p) {
+      document.getElementById('detail-panel').style.display = 'block';
+      document.getElementById('detail-title').textContent = p.name;
+      document.getElementById('detail-acronym').textContent = p.acronym;
+      document.getElementById('detail-local').textContent = p.local;
+      document.getElementById('detail-country').textContent = p.country;
+      document.getElementById('detail-continent').textContent = p.continent;
+      document.getElementById('detail-year').textContent = p.year;
+      document.getElementById('detail-governance').textContent = p.governance;
+      document.getElementById('detail-tropical').textContent = p.focus_tropical;
+      document.getElementById('detail-priority').textContent = p.priority_areas;
+      document.getElementById('detail-audience').textContent = p.target_audience;
+    }
+
+    function getColorByContinent(continent) {
+      return {
+        "Africa": "#f94144", "Asia": "#f3722c", "Europe": "#f9c74f",
+        "North America": "#43aa8b", "South America": "#577590", "Oceania": "#9d4edd"
+      }[continent] || "#000";
+    }
+
+    function renderMap(data, topology) {
+      currentMap = topology;
+      Highcharts.mapChart("container", {
+        chart: { map: topology },
+        title: { text: "Center Map" },
+        mapNavigation: { enabled: true },
+        tooltip: {
+          useHTML: true,
+          formatter: function () {
+            return `<b>Name:</b> ${this.point.name}<br/>
+<b>Acronym:</b> ${this.point.acronym}<br/>
+<b>Location:</b> ${this.point.local}<br/>
+<b>Country:</b> ${this.point.country}<br/>
+<b>Year:</b> ${this.point.year}<br/>
+<b>Governance:</b> ${this.point.governance}<br/>
+<b>Tropical Focus:</b> ${this.point.focus_tropical}`;
+          }
+        },
+        series: [
+          {
+            name: "World Base",
+            type: "map",
+            data: Highcharts.geojson(topology),
+            borderColor: "#909090",
+            nullColor: "#f0f0f0",
             showInLegend: false,
-            enableMouseTracking: false,
-            accessibility: { enabled: false }
-          }, {
-            type: 'mappoint',
-            name: 'Localidades',
-            color: Highcharts.getOptions().colors[1],
-            accessibility: {
-              point: {
-                valueDescriptionFormat: '{xDescription}. Lat: {point.lat:.2f}, lon: {point.lon:.2f}.'
+            enableMouseTracking: false
+          },
+          {
+            type: "mappoint",
+            name: "Centers",
+            data: data.map(p => ({ ...p, color: getColorByContinent(p.continent) })),
+            point: {
+              events: {
+                click: function () {
+                  showDetailPanel(this);
+                  this.series.chart.mapView.setView({ lat: this.lat, lon: this.lon }, 4);
+                }
               }
             },
-            data: points
-          }]
-        });
-      })
-      .catch(error => console.error('Erro ao carregar mapa ou dados:', error));
-    </script>
-  </body>
+            dataLabels: {
+              enabled: true,
+              format: '{point.acronym}',
+              style: {
+                fontSize: '11px',
+                fontWeight: 'bold',
+                color: '#000',
+                textOutline: '1px contrast'
+              }
+            }
+          }
+        ]
+      });
+    }
+
+    Promise.all([
+      fetch('https://code.highcharts.com/mapdata/custom/world-highres2.topo.json').then(r => r.json()),
+      fetch('./centers_data_normalized_en_final_normalized.json').then(r => r.json())
+    ])
+    .then(([topo, data]) => {
+      allData = data.map(d => ({
+        ...d,
+        governance: normalizeGovernance(d.governance)
+      }));
+      populateFilters(allData);
+      renderMap(allData, topo);
+      document.querySelectorAll(".filters select").forEach(sel => {
+        sel.addEventListener("change", () => renderMap(filterData(), topo));
+      });
+    })
+    .catch(err => console.error("Loading error:", err));
+  </script>
+</body>
 </html>
