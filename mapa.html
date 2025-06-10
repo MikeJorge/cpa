@@ -56,14 +56,28 @@
       position: fixed;
       top: 0;
       right: 0;
-      width: 30%;
-      height: 100%;
-      background: #fff;
-      padding: 1rem;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
       overflow-y: auto;
-      border-left: 1px solid #ccc;
-      box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-      z-index: 1000;
+      border-right: 1px solid #ccc;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      z-index: 9999999;
+      backdrop-filter: blur(7px);
+    }
+
+    #detail-panel-area{
+      background-color: #FFFFFF;
+      padding: 1rem;
+      width: 400px;
+      height: 100vh;
+      z-index: 99999;
+    }
+    #detail-panel-area h2{
+      margin-right: 15px;
+    }
+    #detail-panel-area p{
+      margin-top: 10px;
     }
 
     @media (max-width: 800px) {
@@ -107,7 +121,8 @@
   <div id="container" tabindex="-1"></div>
 
   <div id="detail-panel">
-    <button onclick="closeDetail()" style="float:right; font-size:1.2rem; background:none; border:none; cursor:pointer;">✖</button>
+    <div id="detail-panel-area"> 
+    <button onclick="closeDetail()" style="float:right; margin-left: 16px; font-size:1.2rem; background:none; border:none; cursor:pointer;">✖</button>
     <h2 id="detail-title"></h2>
     <p><strong>Acronym:</strong> <span id="detail-acronym"></span></p>
     <p><strong>Location:</strong> <span id="detail-local"></span></p>
@@ -118,6 +133,7 @@
     <p><strong>Tropical Focus:</strong> <span id="detail-tropical"></span></p>
     <p><strong>Priority Area:</strong> <span id="detail-priority"></span></p>
     <p><strong>Target Audience:</strong> <span id="detail-audience"></span></p>
+    </div>
   </div>
 
   <script src="./src-mapa/code/highmaps.js"></script>
